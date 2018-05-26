@@ -221,65 +221,12 @@ namespace WindowsFormsApp15
         {
             if (Application.OpenForms["QuanLyDiem"] as QuanLyDiem == null)
             {
-                //QuanLyDiem f = new QuanLyDiem();
-                //foreach (Control item in BaoForm.Controls.OfType<Form>())
-                //{
-                //    BaoForm.Controls.Remove(item);
-                //}
-                //QuanLyDiem frm = new QuanLyDiem();
-                //;
+               
                 Them(qlDiem);
-                //qlDiem.TopLevel = false;
-                //qlDiem.AutoScroll = true;
-                //qlDiem.MdiParent = this;
-                //BaoForm.Controls.Add(qlDiem);
-                // qlDiem.Dock = DockStyle.Fill;
+               
                 qlDiem.MAGV = MAGV;
                 qlDiem.Show();
-                ////HTform(qlDiem);
-                //// btnQuanLyDiem.BackColor = Color.Red;
-
-
-                ////them 1 tab
-
-                ////pnDiem = new Panel();
-                ////pnDiem.Width = 100;
-                ////pnDiem.Height = 30;
-                ////pnDiem.BackColor = Color.White;
-                ////pnDiem.BorderStyle = BorderStyle.FixedSingle;
-                //Taopn(out pnDiem);
-
-                ////them btn
-
-                ////disQuanLyDiem = new Button();
-                ////disQuanLyDiem.Width = 70;
-                ////disQuanLyDiem.Text = "QLdiem";
-                ////disQuanLyDiem.FlatStyle = FlatStyle.Flat;
-                ////disQuanLyDiem.FlatAppearance.BorderSize = 0;
-                //Taodis(out disQuanLyDiem);
-                //pnDiem.Controls.Add(disQuanLyDiem);
-                //disQuanLyDiem.Dock = DockStyle.Right;
-
-
-                ////clsQuanLyDiem = new Button();
-                ////clsQuanLyDiem.Width = 30;
-                ////clsQuanLyDiem.Text = "X";
-                ////clsQuanLyDiem.ForeColor = Color.Red;
-                ////clsQuanLyDiem.FlatStyle = FlatStyle.Flat;
-                ////clsQuanLyDiem.FlatAppearance.BorderSize = 0;
-                //Taocls(out clsQuanLyDiem);
-                //clsQuanLyDiem.Click += ClsQuanLyDiem_Click;
-                //pnDiem.Controls.Add(clsQuanLyDiem);
-                //clsQuanLyDiem.Dock = DockStyle.Right;
-
-
-                //TabGG.Controls.Add(pnDiem);
-                //pnDiem.Dock = DockStyle.Left;
-
-
-
-
-
+               
 
             }
             else
@@ -374,7 +321,7 @@ namespace WindowsFormsApp15
                 qlHocSinh.Show();
             }
         }
-
+        //form load
         private void FormMain_Load(object sender, EventArgs e)
         {
           //  CanBoGiaoVienBLL c = new CanBoGiaoVienBLL();
@@ -481,6 +428,7 @@ namespace WindowsFormsApp15
             na.ForeColor = Color.Red;
             na.Text = "X";
         }
+        //code bo di
         private void Taopn(out Panel pn)
         {
             pn = new Panel();
@@ -489,7 +437,7 @@ namespace WindowsFormsApp15
             pn.Width = 100;
             pn.Height = 30;
         }
-
+        //lay ma gv
         string MAGV;
         private void dos (){
             CanBoGiaoVienBLL cb = new CanBoGiaoVienBLL();
@@ -512,76 +460,15 @@ namespace WindowsFormsApp15
         {
             if (Application.OpenForms["PhanCongGiangDay"] as PhanCongGiangDay == null)
             {
-                //PhanCongGiangDay frm = new PhanCongGiangDay();
-                //frm.FormBorderStyle = FormBorderStyle.None;
-                //frm.TopLevel = false;
-                //frm.AutoScroll = true;
-                //frm.MdiParent = this;
-
-                //foreach (Control item in BaoForm.Controls.OfType<Form>())
-                //{
-                //    BaoForm.Controls.Remove(item);
-                //}
-                // HTform(Phan);
-                //BaoForm.Controls.Remove(f);
-                //BaoForm.Controls.Add(frm);
-
-                //frm.Dock = DockStyle.Fill;
+               
                 Them(Phan);
                 Phan.Show();
-                ////btnQuanLyDiem.BackColor = Color.Red;
-
-
-                ////them 1 tab
-
-                ////pnPhancong = new Panel();
-                ////pnPhancong.Width = 100;
-                ////pnPhancong.Height = 30;
-                ////pnPhancong.BackColor = Color.White;
-                ////pnPhancong.BorderStyle = BorderStyle.FixedSingle;
-                //Taopn(out pnPhancong);
-
-                ////them btn
-
-                ////disPhanCong = new Button();
-                ////disPhanCong.Width = 70;
-                ////disPhanCong.Text = "PhanCong";
-                ////disPhanCong.FlatStyle = FlatStyle.Flat;
-                ////disPhanCong.FlatAppearance.BorderSize = 0;
-                //Taodis(out disPhanCong);
-                //pnPhancong.Controls.Add(disPhanCong);
-                //disPhanCong.Dock = DockStyle.Right;
-
-
-                //// clsPhanCong = new Button();
-                ////clsPhanCong.Width = 30;
-                ////clsPhanCong.Text = "X";
-                ////clsPhanCong.ForeColor = Color.Red;
-                ////clsPhanCong.FlatStyle = FlatStyle.Flat;
-                ////clsPhanCong.FlatAppearance.BorderSize = 0;
-                //Taocls(out clsPhanCong);
-                //pnPhancong.Controls.Add(clsPhanCong);
-                //clsPhanCong.Dock = DockStyle.Right;
-
-
-                //TabGG.Controls.Add(pnPhancong);
-                //pnPhancong.Dock = DockStyle.Left;
-
+               
 
             }
             else
             {
-                //PhanCongGiangDay frm = new PhanCongGiangDay();
-                ////foreach (Control item in BaoForm.Controls.OfType<Form>())
-                ////{
-                ////    BaoForm.Controls.Remove(item);
-
-                ////}
-                ////BaoForm.Controls.Add(frm);
-                //QuanLyDiem f = new QuanLyDiem();
-                //f.Dock = DockStyle.None;
-
-                //frm.Dock = DockStyle.Fill;
+                
                 Them(Phan);
                 
             }

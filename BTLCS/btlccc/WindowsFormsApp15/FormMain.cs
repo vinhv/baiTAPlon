@@ -28,7 +28,7 @@ namespace WindowsFormsApp15
         QuanLyDiem qlDiem = new QuanLyDiem();
 
         QuanLyGiaovien qlGiaoVien = new QuanLyGiaovien();
-
+        //HoSoHocSinh qlHocSinh = new HoSoHocSinh();
         QuanLyHocSinh qlHocSinh = new QuanLyHocSinh();
 
         QuanLyLop qlLOp = new QuanLyLop();

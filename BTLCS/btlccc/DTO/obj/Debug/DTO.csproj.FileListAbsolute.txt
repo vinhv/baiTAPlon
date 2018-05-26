@@ -1,0 +1,6 @@
+C:\Users\Vinhl\Documents\GitHub\btlccc\DTO\bin\Debug\DTO.dll
+C:\Users\Vinhl\Documents\GitHub\btlccc\DTO\bin\Debug\DTO.pdb
+C:\Users\Vinhl\Documents\GitHub\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Vinhl\Documents\GitHub\btlccc\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Vinhl\Documents\GitHub\btlccc\DTO\obj\Debug\DTO.dll
+C:\Users\Vinhl\Documents\GitHub\btlccc\DTO\obj\Debug\DTO.pdb

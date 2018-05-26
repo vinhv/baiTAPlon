@@ -18,22 +18,21 @@ namespace WindowsFormsApp15
             InitializeComponent();
         }
         //btn
-        public bool gv = false
-            ;
+        public bool gv = false;
         public bool ad = false;
         public string TenUsers { get; set; }
         public string MaGV { get; set; }
         
         
         
-        QuanLyDiem qlDiem = new QuanLyDiem()
+        QuanLyDiem qlDiem = new QuanLyDiem();
 
-                                                 ;
-     
-        QuanLyGiaovien qlGiaoVien
-            = new QuanLyGiaovien();
+        QuanLyGiaovien qlGiaoVien = new QuanLyGiaovien();
+
         QuanLyHocSinh qlHocSinh = new QuanLyHocSinh();
+
         QuanLyLop qlLOp = new QuanLyLop();
+
         ThongKeGV tkGV = new ThongKeGV();
         ThongKeHS tkHS = new ThongKeHS();
         QuanLyMonHoc qlMOnHoc = new QuanLyMonHoc();
@@ -472,6 +471,11 @@ namespace WindowsFormsApp15
                 Them(Phan);
                 
             }
+
+        }
+
+        private void btnQuanLyDanhMuc_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhSachGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachGiaoVien.designer.cs">
+      <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoSoHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoSoHocSinh.designer.cs">
+      <DependentUpon>HoSoHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanCongGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongGD.designer.cs">
+      <DependentUpon>PhanCongGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCBGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCBGV.designer.cs">
+      <DependentUpon>QuanLyCBGV.cs</DependentUpon>
     </Compile>
     <Compile Include="SuaDiem.cs">
       <SubType>Form</SubType>
@@ -114,11 +138,20 @@
     <Compile Include="ThongKeHS.Designer.cs">
       <DependentUpon>ThongKeHS.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhSachGiaoVien.resx">
+      <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoSoHocSinh.resx">
+      <DependentUpon>HoSoHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanCongGD.resx">
+      <DependentUpon>PhanCongGD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhanCongGiangDay.resx">
       <DependentUpon>PhanCongGiangDay.cs</DependentUpon>
@@ -133,6 +166,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLyCBGV.resx">
+      <DependentUpon>QuanLyCBGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyDiem.resx">
       <DependentUpon>QuanLyDiem.cs</DependentUpon>
     </EmbeddedResource>

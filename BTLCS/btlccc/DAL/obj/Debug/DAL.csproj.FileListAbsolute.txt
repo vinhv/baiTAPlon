@@ -33,3 +33,16 @@ C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.csprojR
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.dll
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.pdb
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DAL.dll
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DAL.pdb
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DTO.dll
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\mscorlib.dll
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DTO.pdb
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\normidna.nlp
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\normnfc.nlp
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\normnfd.nlp
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\normnfkc.nlp
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\normnfkd.nlp
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.dll
+D:\Git\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.pdb

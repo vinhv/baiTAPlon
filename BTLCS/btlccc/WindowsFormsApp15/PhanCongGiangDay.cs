@@ -16,5 +16,10 @@ namespace WindowsFormsApp15
         {
             InitializeComponent();
         }
+
+        private void PhanCongGiangDay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

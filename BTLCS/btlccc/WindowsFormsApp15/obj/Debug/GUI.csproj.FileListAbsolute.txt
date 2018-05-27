@@ -156,3 +156,7 @@ D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\GUI.csproj.GenerateRes
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.DanhSachGiaoVien.resources
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmHoSoHocSinh.resources
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmQLDMGiaoVien.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.DanhSachGiaoVien.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmHoSoHocSinh.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\PhanCongGD.PhanCongGD.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmQLDMGiaoVien.resources

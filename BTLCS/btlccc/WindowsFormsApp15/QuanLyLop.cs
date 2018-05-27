@@ -16,5 +16,10 @@ namespace WindowsFormsApp15
         {
             InitializeComponent();
         }
+
+        private void QuanLyLop_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

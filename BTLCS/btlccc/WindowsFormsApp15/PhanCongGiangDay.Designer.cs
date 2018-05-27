@@ -49,6 +49,7 @@
             this.Controls.Add(this.button1);
             this.Name = "PhanCongGiangDay";
             this.Text = "sasdasd";
+            this.Load += new System.EventHandler(this.PhanCongGiangDay_Load);
             this.ResumeLayout(false);
 
         }

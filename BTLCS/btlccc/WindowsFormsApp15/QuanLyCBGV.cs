@@ -16,5 +16,10 @@ namespace QuanLyCBGV
         {
             InitializeComponent();
         }
+
+        private void frmQLDMGiaoVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

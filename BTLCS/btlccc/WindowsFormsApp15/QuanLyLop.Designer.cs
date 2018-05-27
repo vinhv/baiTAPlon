@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.Name = "QuanLyLop";
             this.Text = "QuanLyLop";
+            this.Load += new System.EventHandler(this.QuanLyLop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

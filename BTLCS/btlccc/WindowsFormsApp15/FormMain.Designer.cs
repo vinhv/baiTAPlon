@@ -61,8 +61,12 @@
             this.btnLen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnQuanLyDanhMuc = new System.Windows.Forms.Button();
-            this.BaoForm = new System.Windows.Forms.Panel();
+            this.BaoFor = new System.Windows.Forms.Panel();
             this.TabGG = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.BaoForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -71,7 +75,7 @@
             this.pnXuong.SuspendLayout();
             this.pnDanhMuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.BaoForm.SuspendLayout();
+            this.BaoFor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -374,6 +378,7 @@
             this.btnThongKeBaoCao.TabIndex = 0;
             this.btnThongKeBaoCao.Text = "Thống kê báo cáo";
             this.btnThongKeBaoCao.UseVisualStyleBackColor = false;
+            this.btnThongKeBaoCao.Click += new System.EventHandler(this.btnThongKeBaoCao_Click);
             // 
             // pnDanhMuc
             // 
@@ -503,16 +508,20 @@
             this.btnQuanLyDanhMuc.UseVisualStyleBackColor = false;
             this.btnQuanLyDanhMuc.Click += new System.EventHandler(this.btnQuanLyDanhMuc_Click);
             // 
-            // BaoForm
+            // BaoFor
             // 
-            this.BaoForm.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.BaoForm.Controls.Add(this.TabGG);
-            this.BaoForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BaoForm.Location = new System.Drawing.Point(262, 53);
-            this.BaoForm.Name = "BaoForm";
-            this.BaoForm.Size = new System.Drawing.Size(677, 352);
-            this.BaoForm.TabIndex = 3;
-            this.BaoForm.Paint += new System.Windows.Forms.PaintEventHandler(this.BaoForm_Paint);
+            this.BaoFor.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.BaoFor.Controls.Add(this.BaoForm);
+            this.BaoFor.Controls.Add(this.panel5);
+            this.BaoFor.Controls.Add(this.panel4);
+            this.BaoFor.Controls.Add(this.panel3);
+            this.BaoFor.Controls.Add(this.TabGG);
+            this.BaoFor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BaoFor.Location = new System.Drawing.Point(262, 53);
+            this.BaoFor.Name = "BaoFor";
+            this.BaoFor.Size = new System.Drawing.Size(677, 352);
+            this.BaoFor.TabIndex = 3;
+            this.BaoFor.Paint += new System.Windows.Forms.PaintEventHandler(this.BaoForm_Paint);
             // 
             // TabGG
             // 
@@ -524,12 +533,47 @@
             this.TabGG.TabIndex = 0;
             this.TabGG.Paint += new System.Windows.Forms.PaintEventHandler(this.TabGG_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(50, 352);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(50, 302);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(627, 50);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(627, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(50, 302);
+            this.panel5.TabIndex = 1;
+            // 
+            // BaoForm
+            // 
+            this.BaoForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BaoForm.Location = new System.Drawing.Point(50, 0);
+            this.BaoForm.Name = "BaoForm";
+            this.BaoForm.Size = new System.Drawing.Size(577, 302);
+            this.BaoForm.TabIndex = 2;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 405);
-            this.Controls.Add(this.BaoForm);
+            this.Controls.Add(this.BaoFor);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -553,7 +597,7 @@
             this.pnXuong.ResumeLayout(false);
             this.pnDanhMuc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.BaoForm.ResumeLayout(false);
+            this.BaoFor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -569,7 +613,7 @@
         private System.Windows.Forms.ToolStripMenuItem troGiupToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel BaoForm;
+        private System.Windows.Forms.Panel BaoFor;
         private System.Windows.Forms.Button btnThongKeBaoCao;
         private System.Windows.Forms.Button btnQuanLyDiem;
         private System.Windows.Forms.Button btnPhanCongGiangDay;
@@ -594,6 +638,10 @@
         private System.Windows.Forms.Button max;
         private System.Windows.Forms.Button mini;
         private System.Windows.Forms.Button moo;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel BaoForm;
     }
 }
 

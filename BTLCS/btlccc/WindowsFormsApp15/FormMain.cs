@@ -30,7 +30,7 @@ namespace WindowsFormsApp15
         QuanLyGiaovien qlGiaoVien = new QuanLyGiaovien();
         //HoSoHocSinh qlHocSinh = new HoSoHocSinh();
         QuanLyHocSinh qlHocSinh = new QuanLyHocSinh();
-
+        PhanCongGD qlgd = new PhanCongGD();
         QuanLyLop qlLOp = new QuanLyLop();
 
         ThongKeGV tkGV = new ThongKeGV();
@@ -240,7 +240,7 @@ namespace WindowsFormsApp15
         //su kien dong
         private void Them(Form a)
         {
-            foreach (Control item in BaoForm.Controls.OfType<Form>())
+            foreach (Control item in BaoFor.Controls.OfType<Form>())
             {
 
 
@@ -287,9 +287,9 @@ namespace WindowsFormsApp15
 
 
 
-            foreach (Control item in BaoForm.Controls.OfType<Form>())
+            foreach (Control item in BaoFor.Controls.OfType<Form>())
                 {
-                    BaoForm.Controls.Remove(item);
+                    BaoFor.Controls.Remove(item);
                 }
             
         }
@@ -457,24 +457,29 @@ namespace WindowsFormsApp15
         //phancong
         private void btnPhanCongGiangDay_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["PhanCongGiangDay"] as PhanCongGiangDay == null)
+            if (Application.OpenForms["PhanCongGD"] as PhanCongGD == null)
             {
                
-                Them(Phan);
-                Phan.Show();
+                Them(qlgd);
+                qlgd.Show();
                
 
             }
             else
             {
                 
-                Them(Phan);
+                Them(qlgd);
                 
             }
 
         }
 
         private void btnQuanLyDanhMuc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThongKeBaoCao_Click(object sender, EventArgs e)
         {
 
         }

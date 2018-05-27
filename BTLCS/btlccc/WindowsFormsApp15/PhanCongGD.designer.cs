@@ -1,4 +1,4 @@
-﻿namespace PhanCongGD
+﻿namespace WindowsFormsApp15
 {
     partial class PhanCongGD
     {
@@ -50,7 +50,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(361, 71);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(145, 20);
             this.dateTimePicker1.TabIndex = 21;
@@ -71,7 +71,7 @@
             this.dgvGiangday.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvGiangday.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGiangday.Location = new System.Drawing.Point(60, 193);
-            this.dgvGiangday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvGiangday.Margin = new System.Windows.Forms.Padding(2);
             this.dgvGiangday.Name = "dgvGiangday";
             this.dgvGiangday.RowTemplate.Height = 24;
             this.dgvGiangday.Size = new System.Drawing.Size(400, 179);
@@ -81,7 +81,7 @@
             // 
             this.cboLop.FormattingEnabled = true;
             this.cboLop.Location = new System.Drawing.Point(268, 72);
-            this.cboLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboLop.Margin = new System.Windows.Forms.Padding(2);
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(79, 21);
             this.cboLop.TabIndex = 16;
@@ -90,7 +90,7 @@
             // 
             this.cboGiaovien.FormattingEnabled = true;
             this.cboGiaovien.Location = new System.Drawing.Point(125, 72);
-            this.cboGiaovien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboGiaovien.Margin = new System.Windows.Forms.Padding(2);
             this.cboGiaovien.Name = "cboGiaovien";
             this.cboGiaovien.Size = new System.Drawing.Size(127, 21);
             this.cboGiaovien.TabIndex = 15;
@@ -99,7 +99,7 @@
             // 
             this.cboMon.FormattingEnabled = true;
             this.cboMon.Location = new System.Drawing.Point(8, 72);
-            this.cboMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboMon.Margin = new System.Windows.Forms.Padding(2);
             this.cboMon.Name = "cboMon";
             this.cboMon.Size = new System.Drawing.Size(106, 21);
             this.cboMon.TabIndex = 14;
@@ -144,7 +144,7 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(280, 135);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 32);
             this.button2.TabIndex = 18;
@@ -159,7 +159,7 @@
             this.btnPhancong.Image = ((System.Drawing.Image)(resources.GetObject("btnPhancong.Image")));
             this.btnPhancong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhancong.Location = new System.Drawing.Point(113, 135);
-            this.btnPhancong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPhancong.Margin = new System.Windows.Forms.Padding(2);
             this.btnPhancong.Name = "btnPhancong";
             this.btnPhancong.Size = new System.Drawing.Size(116, 32);
             this.btnPhancong.TabIndex = 17;
@@ -211,9 +211,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PhanCongGD";
             this.Text = "PhanCongGD";
+            this.Load += new System.EventHandler(this.PhanCongGD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiangday)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

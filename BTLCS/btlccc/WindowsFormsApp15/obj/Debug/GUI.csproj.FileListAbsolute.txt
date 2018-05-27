@@ -160,3 +160,4 @@ C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Deb
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmHoSoHocSinh.resources
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\PhanCongGD.PhanCongGD.resources
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmQLDMGiaoVien.resources
+D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.PhanCongGD.resources

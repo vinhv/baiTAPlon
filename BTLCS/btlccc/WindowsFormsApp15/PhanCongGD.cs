@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PhanCongGD
+namespace WindowsFormsApp15
 {
     public partial class PhanCongGD : Form
     {
         public PhanCongGD()
         {
             InitializeComponent();
+        }
+
+        private void PhanCongGD_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

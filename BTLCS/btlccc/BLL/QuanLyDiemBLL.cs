@@ -100,7 +100,7 @@ namespace BLL
             if (diem == "v")
             {
                 gt1=-1;
-                return ql.Suadiem2(maHS, maMon, gt1);
+                return ql.Suadiem1(maHS, maMon, gt1);
             }
             else
             {
@@ -154,6 +154,15 @@ namespace BLL
             }
 
             //return "";
+        }
+
+        //insert
+
+        public bool THemDiemMOI(string maHS, string maMon, string diem1,string diem2)
+        {
+            //TH1
+            return ql.MoiDiem(maHS,maMon,123,456);
+           
         }
     }
 }

@@ -249,7 +249,7 @@ namespace DAL
             cmd.CommandType = CommandType.Text;
             if (diem == -1)
             {
-                cmd.CommandText = "update Diem set DiemTB_Ky1=NULL where MaHocSinh=@mahs and MaMonHoc=@mamon ";
+                cmd.CommandText = "update Diem set DiemTB_Ky2=NULL where MaHocSinh=@mahs and MaMonHoc=@mamon ";
                 cmd.Connection = conn;
                 //cmd.Parameters.Add("@t",null).Value = t;
                 //  cmd.Parameters.Add("@diem", SqlDbType.Float).Value = diem;
@@ -267,6 +267,32 @@ namespace DAL
 
             }
 
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Close();
+                return false;
+            }
+            Close();
+            return true;
+        }
+
+        //them bang diem moi cho hoc sinh ma co day trong  lop chua co trong danh sach diem :::
+
+
+        public bool MoiDiem(string maHS, string maMon, double diem1, double diem2)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into Diem values(@mahs,@mamon,NULL,NULL) ";
+            cmd.Connection = conn;
+            
+            cmd.Parameters.Add("@mahs", SqlDbType.NVarChar).Value = maHS;
+            cmd.Parameters.Add("@mamon", SqlDbType.NVarChar).Value = maMon;
             try
             {
                 cmd.ExecuteNonQuery();

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using System.Threading;
 namespace WindowsFormsApp15
 {
     public partial class QuanLyDiem : Form
@@ -37,6 +38,7 @@ namespace WindowsFormsApp15
         List<string> diem2Sua = new List<string>();
         List<int> dongSua1 = new List<int>();
         List<int> dongSua2 = new List<int>();
+        private bool LuubtnThem = false, LuutoolThem = false, LuubtnSua = false, LuutoolSua = false, LuubtnMoi = false, LuutoolMoi = false;
 
         #endregion
         private void TIMGV()
@@ -104,11 +106,20 @@ namespace WindowsFormsApp15
             cbTenMon.DataSource = tenMon;
 
         }
+        //thay doi font tim 
+
+        private void ThayFont()
+        {
+            txtTim.Text = "Mã môn + Tên môn trong combobox :)) or Mã Hoc Sinh";
+            txtTim.ForeColor = Color.Gray;
+        }
         private void QuanLyDiem_Load(object sender, EventArgs e)
         {
-           
+            //thayfont
+            ThayFont();
             
             btnLuu.Enabled = false;
+            toolSave.Enabled = false;
             //tim CAC LOP CAC MON MA GIAO VIEN DANG DANG NHAP DAY
             TIMGV();
             //xoa trung lap
@@ -119,7 +130,7 @@ namespace WindowsFormsApp15
         }
         private bool btnTHemACTIVE = false;
         private bool btnSUAACTIVE = false;
-
+        //Lay ra ma lop dang duoc chon
         
         private void HienThiListView()
         {
@@ -203,28 +214,89 @@ namespace WindowsFormsApp15
             HoTenHS.Clear();
 
         }
-    
         
-     
+        //them moi
+
+        private void ThemMoiHT()
+        {
+            STT = 0;
+            List<string> dsHSHOC = new List<string>();
+            int k = -1;
+            string mal = "";
+            if (cbTenLop.SelectedIndex != -1)
+            {
+                k = cbTenLop.SelectedIndex;
+                mal = MaLop[k];
+            }
+            foreach (var item in ql.dsHs())
+            {
+                if (item.MaLop == mal)
+                {
+                    string mahs = item.MaHocSinh;
+                    dsHSHOC.Add(mahs);
+                }
+            }
+            string mam = "";
+            if (cbTenMon.SelectedIndex != -1)
+            {
+                k = cbTenMon.SelectedIndex;
+                mam = maMon[k];
+            }
+            foreach (var item in dsHSHOC)
+            {
+                bool gg = true;
+                foreach (var i in ql.dsDiem())
+                {
+                    if (item == i.MaHocSinh && mam == i.MaMonHoc)
+                    {
+                        gg = false;
+                        break;
+                    }
+                }
+                if (gg)
+                {
+
+                    DataGridViewRow row = (DataGridViewRow)dataGridView3.Rows[STT].Clone();
+                    row.Cells[0].Value = STT.ToString();
+                    row.Cells[1].Value = item;
+                    row.Cells[2].Value = mam;
+                    row.Cells[3].Value = "";
+                    row.Cells[4].Value = "";
+                    dataGridView3.Rows.Add(row);
+                    STT++;
+                }
+            }
+            STT = 0;
+
+        }
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             
         }
 
-        private void cbTenMon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbTenMon.SelectedIndex != -1)
-                lblMon.Text = cbTenMon.SelectedItem.ToString();
-        }
+        //private void cbTenMon_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cbTenMon.SelectedIndex != -1)
+        //    {
+        //        lblMon.Text = cbTenMon.SelectedItem.ToString();
+        //        int k = cbTenMon.SelectedIndex;
+        //        labelmamon.Text = maMon[k];
+        //    }
+        //}
 
-        private void cbTenLop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            lblLOp.Text = cbTenLop.SelectedItem.ToString();
-            int k = cbTenLop.SelectedIndex;
-            lblMa.Text = MaLop[k];
+        //private void cbTenLop_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cbTenLop.SelectedIndex != -1)
+        //    {
+        //        lblLOp.Text = cbTenLop.SelectedItem.ToString();
+        //        int k = cbTenLop.SelectedIndex;
+        //        lblMa.Text = MaLop[k];
+        //    }
            
-        }
+        //}
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -242,49 +314,159 @@ namespace WindowsFormsApp15
         {
             dataGridView1.Columns[3].ReadOnly = true;
             dataGridView1.Columns[4].ReadOnly = true;
-        }
-        private void unEDA2()
-        {
             dataGridView2.Columns[5].ReadOnly = true;
             dataGridView2.Columns[6].ReadOnly = true;
+            dataGridView3.Columns[3].ReadOnly = true;
+            dataGridView3.Columns[4].ReadOnly = true;
+            
+        }
+
+        private bool tCK()
+        {
+            if (txtTim.Text == "Mã môn + Tên môn trong combobox :)) or Mã Hoc Sinh" || txtTim.ForeColor == Color.Gray)
+                return true;
+            else
+                return false;
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //kiem tra btn
-            unEDA1();
-            unEDA2();
-            if (btnSUAACTIVE)
+            if (tCK())
             {
-                HOiBTNsua();
+                //kiem tra btn
+                LuubtnMoi = false;
+                LuubtnSua = false;
+                LuubtnThem = false;
+
+                unEDA1();
+
+                if (btnSUAACTIVE)
+                {
+                    HOiBTNsua();
+                }
+                if (btnTHemACTIVE)
+                {
+                    HoiBtnTHem();
+                }
+
+                btnSUAACTIVE = false;
+                btnTHemACTIVE = false;
+
+                if (dataGridView1.Visible == false)
+                    CH("dataGridView1");
+                int k = 0;
+                if (cbTenMon.SelectedIndex != -1)
+                {
+                    k = cbTenMon.SelectedIndex;
+                    MamonLay = maMon[k];
+                }
+
+                dataGridView1.Rows.Clear();
+                dataGridView1.Refresh();
+                STT = 0;
+                // if(tCK())
+                HienThiListView();
+
             }
-            if (btnTHemACTIVE)
+            else
+
             {
-                HoiBtnTHem();
+                //kiem tra btn
+                LuubtnMoi = false;
+                LuubtnSua = false;
+                LuubtnThem = false;
+
+               // unEDA1();
+
+                if (btnSUAACTIVE)
+                {
+                    HOiBTNsua();
+                }
+                if (btnTHemACTIVE)
+                {
+                    HoiBtnTHem();
+                }
+
+                btnSUAACTIVE = false;
+                btnTHemACTIVE = false;
+
+                if (dataGridView4.Visible == false)
+                    CH("dataGridView4");
+                int k = 0;
+                if (cbTenMon.SelectedIndex != -1)
+                {
+                    k = cbTenMon.SelectedIndex;
+                    MamonLay = maMon[k];
+                }
+
+                dataGridView4.Rows.Clear();
+                dataGridView4.Refresh();
+                STT = 0;
+                // if(tCK())
+                Hths();
             }
-
-
-
-
-
-            btnSUAACTIVE = false;
-            btnTHemACTIVE = false;
-            if (dataGridView1.Visible == false)
-                UNCH();
-            int k = 0;
-            if (cbTenMon.SelectedIndex != -1)
-            {
-                k = cbTenMon.SelectedIndex;
-                MamonLay = maMon[k];
-            }
-           
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
-            STT = 0;
-            HienThiListView();
-
             btnLuu.Enabled = false;
+            toolSave.Enabled = false;
            
 
+        }
+
+        //
+        private List<string> mhs = new List<string>();
+        private void lay()
+        {
+            //List<string> mhs = new List<string>();
+            foreach (var item in ql.dsHs())
+
+            {
+                foreach (var ml in MaLop)
+                {
+                    if (item.MaLop == ml)
+                    {
+                        mhs.Add(item.MaHocSinh);
+                        break;
+                    }
+                }
+            }
+
+            
+        }
+        private void Hths()
+        {
+            lay();
+            bool g = false;
+            foreach (var hs in ql.dsHs())
+            {
+
+
+                foreach (var item in mhs)
+                {
+                    if (hs.MaHocSinh == item)
+                    {
+                        if (item == txtTim.Text)
+                        {
+                            DataGridViewRow row = (DataGridViewRow)dataGridView4.Rows[STT].Clone();
+                            row.Cells[0].Value = hs.MaHocSinh.ToString();
+                            row.Cells[1].Value = hs.HoTen;
+                            row.Cells[2].Value = hs.NgaySinh;
+                            row.Cells[3].Value = hs.GioiTinh;
+                            row.Cells[4].Value = hs.DiaChi;
+                            row.Cells[5].Value = hs.DiemVAotruong.ToString();
+                            row.Cells[6].Value = hs.HoTenBoMe;
+                            row.Cells[7].Value = hs.sdt;
+                            row.Cells[8].Value = hs.MaLop;
+
+                            dataGridView4.Rows.Add(row);
+                            g = true;
+                            break;
+
+
+                        }
+                    }
+                }
+
+            }
+            if (!g)
+                MessageBox.Show("Khong thay hoc sinh co ma: " + txtTim, "null", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         //CHeck btn sua
         private void CheckBTNSUA()
@@ -333,7 +515,10 @@ namespace WindowsFormsApp15
 
                 }
                 if (xx)
+                {
                     btnLuu.Enabled = true;
+                    toolSave.Enabled = true;
+                }
                 else
                 {
                     MessageBox.Show("Điểm đã thêm hết rồi \nchỉ có sửa or xem được thôi thím ơi !!!", "");
@@ -345,9 +530,15 @@ namespace WindowsFormsApp15
         {
             //ht
 
-          //  unEDA2();
+         
+            unEDA1();
+       
+            LuubtnMoi = false;
+            LuubtnSua = false;
+            LuubtnThem = true;
+         
             if (dataGridView1.Visible == false)
-                UNCH();
+                CH("dataGridView1");
             int k = 0;
             if (cbTenMon.SelectedIndex != -1)
             {
@@ -359,8 +550,6 @@ namespace WindowsFormsApp15
             dataGridView1.Refresh();
             STT = 0;
             HienThiListView();
-
-
             btnTHemACTIVE = true;
             if(btnSUAACTIVE)
                 CheckBTNSUA();
@@ -370,7 +559,7 @@ namespace WindowsFormsApp15
         //btn LUU
         private void button4_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Visible == true)
+            if (LuubtnThem)
             {
                 int i = 0; bool t = true;
                 foreach (int item in dongSua1)
@@ -390,6 +579,7 @@ namespace WindowsFormsApp15
                 }
                 if (!t)
                 {
+                    dataGridView1.Refresh();
                     dataGridView1.CurrentCell = dataGridView1[3, i];
                     return;
                 }
@@ -414,18 +604,23 @@ namespace WindowsFormsApp15
                 }
                 if (!t)
                 {
-                    dataGridView1.CurrentCell = dataGridView1[4, j];return;
+                    dataGridView1.Refresh();
+                    dataGridView1.CurrentCell = dataGridView1[4, j];
                 }
                 if (t)
                 {
+                    dataGridView1.Refresh();
                     MessageBox.Show("Thêm thành công", "success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                  //  btnLuu.Enabled = false;
-                    return;
+                    toolStripProgressBar1.Visible = true;
+                    backgroundWorker1.RunWorkerAsync();
+                    button2_Click(null, null);
+                    //  btnLuu.Enabled = false;
+
                 }
-                return;
+               
             }
             //xoa
-            if (dataGridView2.Visible == true)
+            if (LuubtnSua)
             {
                 int m = 0,c=0;
                 bool t = true;
@@ -435,7 +630,7 @@ namespace WindowsFormsApp15
                     {
                         bool ck = true, ck1 = true;
 
-                        if (dataGridView2.Rows[i].Cells[5].Value == null)
+                        if (dataGridView2.Rows[i].Cells[5].Value == null || dataGridView2.Rows[i].Cells[5].Value.ToString()=="")
                             ck = ql.Suadiem1(
                                                      dataGridView2.Rows[i].Cells[1].Value.ToString(),
                                                      MamonLay,
@@ -458,10 +653,10 @@ namespace WindowsFormsApp15
 
                         }
 
-
+                       // System.Threading.Thread.Sleep(500);
                         //diem 2
 
-                        if (dataGridView2.Rows[i].Cells[6].Value == null)
+                        if (dataGridView2.Rows[i].Cells[6].Value == null || dataGridView2.Rows[i].Cells[6].Value.ToString()=="")
                             ck1 = ql.Suadiem2(
                                                      dataGridView2.Rows[i].Cells[1].Value.ToString(),
                                                      MamonLay,
@@ -495,16 +690,54 @@ namespace WindowsFormsApp15
                 }
                 if (!t)
                 {
+                    dataGridView2.Refresh();
                     dataGridView2.CurrentCell = dataGridView2[c, m ];
-                    return;
+                    
                 }
                
                 
                 if (t)
                 {
+                    dataGridView2.Refresh();
                     MessageBox.Show("Sua thành công", "success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                   // btnLuu.Enabled = false;
-                    return;
+                    toolStripProgressBar1.Visible = true;
+                    backgroundWorker1.RunWorkerAsync();
+                    button3_Click(null, null);
+                    // btnLuu.Enabled = false;
+
+                }
+                
+            }
+            //btnLuu.Enabled = false;
+
+            if (LuubtnMoi)
+            {
+                if (dataGridView3.SelectedRows.Count > 0)
+                {
+                    DialogResult d = MessageBox.Show("Ban co muon thuc su them cac hoc sinh nay vao bang diem ???", "questn", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+                    if (d == DialogResult.Yes)
+                    {
+
+                        for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
+                        {
+                            if (dataGridView3.Rows[i].Selected == true)
+                                ql.THemDiemMOI(dataGridView3.Rows[i].Cells[1].Value.ToString(), MamonLay, "", "");
+                        }
+                        toolStripProgressBar1.Visible = true;
+                        backgroundWorker1.RunWorkerAsync();
+                        MessageBox.Show("Them moi thanh cong ", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    btnMoi_Click(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("can chon de them vao bao diem ","",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 }
             }
             //btnLuu.Enabled = false;
@@ -512,21 +745,59 @@ namespace WindowsFormsApp15
 
         }
         //hien thi data2
-        private void CH()
+        private void CH(string Name)
         {
-            dataGridView1.Dock = DockStyle.None;
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = true;
-            dataGridView2.Dock = DockStyle.Fill;
+            if (Name == "dataGridView2")
+            {
+                dataGridView4.Dock = DockStyle.None;
+                dataGridView4.Visible = false;
+                dataGridView1.Dock = DockStyle.None;
+                dataGridView1.Visible = false;
+                dataGridView3.Dock = DockStyle.None;
+                dataGridView3.Visible = false;
+
+                dataGridView2.Visible = true;
+                dataGridView2.Dock = DockStyle.Fill;
+            }
+            if (Name == "dataGridView1")
+            {
+                dataGridView4.Dock = DockStyle.None;
+                dataGridView4.Visible = false;
+                dataGridView3.Dock = DockStyle.None;
+                dataGridView3.Visible = false;
+                dataGridView2.Dock = DockStyle.None;
+                dataGridView2.Visible = false;
+                dataGridView1.Visible = true;
+                dataGridView1.Dock = DockStyle.Fill;
+            }
+            if (Name == "dataGridView3")
+            {
+                dataGridView4.Dock = DockStyle.None;
+                dataGridView4.Visible = false;
+                dataGridView1.Dock = DockStyle.None;
+                dataGridView1.Visible = false;
+                dataGridView2.Dock = DockStyle.None;
+                dataGridView2.Visible = false;
+
+                dataGridView3.Visible = true;
+                dataGridView3.Dock = DockStyle.Fill;
+            }
+            if (Name == "dataGridView4")
+            {
+                dataGridView1.Dock = DockStyle.None;
+                dataGridView1.Visible = false;
+                dataGridView2.Dock = DockStyle.None;
+                dataGridView2.Visible = false;
+
+                dataGridView3.Visible = false;
+                dataGridView3.Dock = DockStyle.None;
+
+                dataGridView4.Visible = true;
+                dataGridView4.Dock = DockStyle.Fill;
+            }
         }
         //khong ht data2
-        private void UNCH()
-        {
-            dataGridView2.Dock = DockStyle.None;
-            dataGridView2.Visible = false;
-            dataGridView1.Visible = true;
-            dataGridView1.Dock = DockStyle.Fill;
-        }
+       
         private void Hienthidata2()
         {
             STT = 0;
@@ -579,11 +850,11 @@ namespace WindowsFormsApp15
                         row.Cells[2].Value = HoTenHS[c];
 
                         if (item.DiemKy1 == -1)
-                            row.Cells[3].Value = "";
+                            row.Cells[3].Value = null;
                         else
                             row.Cells[3].Value = item.DiemKy1.ToString();
                         if (item.DiemKy2 == -1)
-                            row.Cells[4].Value = "";
+                            row.Cells[4].Value = null;
                         else
                             row.Cells[4].Value = item.DiemKy2.ToString(); ;
 
@@ -591,11 +862,11 @@ namespace WindowsFormsApp15
 
 
                         if (item.DiemKy1 == -1)
-                            row.Cells[5].Value = "";
+                            row.Cells[5].Value = null;
                         else
                             row.Cells[5].Value = item.DiemKy1.ToString();
                         if (item.DiemKy2 == -1)
-                            row.Cells[6].Value = "";
+                            row.Cells[6].Value = null;
                         else
                             row.Cells[6].Value = item.DiemKy2.ToString(); ;
 
@@ -635,9 +906,14 @@ namespace WindowsFormsApp15
         
         private void button3_Click(object sender, EventArgs e)
         {
+         
+            unEDA1();
+       
+            LuubtnMoi = false; 
+            LuubtnSua = true;
+            LuubtnThem = false;
             //lay mamon
-           // unEDA1();
-           // ENASUA();
+          
             int k = 0;
             if (cbTenMon.SelectedIndex != -1)
             {
@@ -649,7 +925,7 @@ namespace WindowsFormsApp15
             if (btnTHemACTIVE)
                  CheckbtnTHEM();
             if (dataGridView2.Visible == false)
-                 CH();
+                 CH("dataGridView2");
             dataGridView2.Rows.Clear();
             dataGridView2.Refresh();
             Hienthidata2();
@@ -662,14 +938,191 @@ namespace WindowsFormsApp15
             else
                 ENASUA();
             btnLuu.Enabled = true;
+            toolSave.Enabled = true;
             
 
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+       
+     
+     
+        //tim
+        private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("" + ql.dsDiem().Count, "");
-            LAYDANHSACHCOMBO();
+            toolStripProgressBar1.Visible = true;
+            backgroundWorker1.RunWorkerAsync();
+            System.Threading.Thread.Sleep(1);
+            button1_Click_1(null, null);
+           
+        }
+        //goi su kien button luu click
+        private void saveToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            button4_Click(null, null);
+        }
+        //tro ve font cu
+        private void TroveFont()
+        {
+            txtTim.Text = "";
+            txtTim.ForeColor = Color.Black;
+        }
+       
+
+        private void txtTim_Enter(object sender, EventArgs e)
+        {
+            TroveFont();
+        }
+
+        private void txtTim_Leave(object sender, EventArgs e)
+        {
+            ThayFont();
+        }
+
+        private void cbTenLop_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbTenLop.SelectedIndex != -1)
+            {
+                lblLOp.Text = cbTenLop.SelectedItem.ToString();
+                int k = cbTenLop.SelectedIndex;
+                lblMa.Text = MaLop[k];
+            }
+        }
+
+        private void cbTenMon_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbTenMon.SelectedIndex != -1)
+            {
+                lblMon.Text = cbTenMon.SelectedItem.ToString();
+                int k = cbTenMon.SelectedIndex;
+                labelmamon.Text = maMon[k];
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i <= 100;i= i+2)
+            {
+                int per = i * 100 / 100;
+                backgroundWorker1.ReportProgress(per,i);
+                System.Threading.Thread.Sleep(1);
+                // System.Threading.Thread.Sleep(100);
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            toolStripProgressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            toolStripProgressBar1.Value = 0;
+            toolStripProgressBar1.Visible = false;
+        }
+
+        private void toolMoi_Click(object sender, EventArgs e)
+        {
+            btnMoi_Click(null, null);
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i <= 100; i = i + 1)
+            {
+                int per = i * 100 / 100;
+                backgroundWorker2.ReportProgress(per, i);
+                System.Threading.Thread.Sleep(1);
+                // System.Threading.Thread.Sleep(100);
+            }
+        }
+
+        private void backgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            toolStripProgressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            toolStripProgressBar1.Value = 0;
+            toolStripProgressBar1.Visible = false;
+        }
+
+        private void txtTim_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //goi sukien button them click
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            button2_Click(null, null);
+        }
+        //goi su kien button sua click
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            button3_Click(null, null);
+        }
+
+        private void helpToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start
+                ("https://www.google.com.vn/search?q=%3F&rlz=1C1PRFI_enVN" +
+                "767VN767&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiAqYDX" +
+                "jaPbAhWKWLwKHUM2DTEQ_AUICigB&biw=1517&bih=664");
+        }
+        //lay ra toan bo hoc sinh :ma hoc sinh , ten hoc sinh hoc mon nay va co nay day , sau do them 2 cot la cot diem ky1 va diem ky2 cho 
+        //user them moi . tao datafridview moi
+        //en
+        private void ENAMOI()
+        {
+            // for(int i=0)
+            for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
+            {
+                dataGridView3.Rows[i].Cells[3].ReadOnly = false;
+                dataGridView3.Rows[i].Cells[4].ReadOnly = false;
+
+            }
+        }
+        private void btnMoi_Click(object sender, EventArgs e)
+        {
+            toolStripProgressBar1.Visible = true;
+            backgroundWorker2.RunWorkerAsync();
+           // System.Threading.Thread.Sleep(5000);
+            
+            unEDA1();
+
+            LuubtnMoi = true;
+            LuubtnSua = false;
+            LuubtnThem = false;
+            //lay mamon
+
+            int k = 0;
+            if (cbTenMon.SelectedIndex != -1)
+            {
+                k = cbTenMon.SelectedIndex;
+                MamonLay = maMon[k];
+            }
+
+            if (dataGridView3.Visible == false)
+                CH("dataGridView3");
+            dataGridView3.Rows.Clear();
+            dataGridView3.Refresh();
+            STT = 0;
+            ThemMoiHT();
+            dataGridView3.Columns[3].DefaultCellStyle.BackColor = Color.Tomato;
+            dataGridView3.Columns[4].DefaultCellStyle.BackColor = Color.Tomato;
+            dataGridView3.ClearSelection();
+            if (dataGridView3.Rows.Count == 1)
+            {
+                MessageBox.Show("Tất cả học sinh trong lớp đều đã được thêm vào bảng điểm :)))");
+            }
+            else
+            {
+               // ENAMOI();
+                btnLuu.Enabled = true;
+                toolSave.Enabled = true;
+            }
+
         }
     }
 }

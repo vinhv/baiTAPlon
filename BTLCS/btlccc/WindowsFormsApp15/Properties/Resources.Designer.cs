@@ -153,6 +153,16 @@ namespace WindowsFormsApp15.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Crea {
+            get {
+                object obj = ResourceManager.GetObject("Crea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dd {
             get {
                 object obj = ResourceManager.GetObject("dd", resourceCulture);
@@ -186,6 +196,16 @@ namespace WindowsFormsApp15.Properties {
         internal static System.Drawing.Bitmap Food_List_Ingredients_icon {
             get {
                 object obj = ResourceManager.GetObject("Food-List-Ingredients-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gg {
+            get {
+                object obj = ResourceManager.GetObject("gg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

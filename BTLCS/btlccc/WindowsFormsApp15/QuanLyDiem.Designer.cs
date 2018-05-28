@@ -36,12 +36,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyDiem));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbTenMon = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,15 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pnDiem = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,26 +69,17 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.t = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diem1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnRIGHT = new System.Windows.Forms.Panel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.txtTim = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.cbdd = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.pnLEFT = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -115,7 +97,28 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.t = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diem1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.pnDiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -225,13 +228,14 @@
             this.btnMoi.ForeColor = System.Drawing.Color.Black;
             this.btnMoi.Image = global::WindowsFormsApp15.Properties.Resources.gg;
             this.btnMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMoi.Location = new System.Drawing.Point(719, 9);
+            this.btnMoi.Location = new System.Drawing.Point(310, 15);
             this.btnMoi.Name = "btnMoi";
             this.btnMoi.Size = new System.Drawing.Size(75, 26);
             this.btnMoi.TabIndex = 8;
             this.btnMoi.Text = "Mới";
             this.btnMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMoi.UseVisualStyleBackColor = false;
+            this.btnMoi.Visible = false;
             this.btnMoi.Click += new System.EventHandler(this.btnMoi_Click);
             // 
             // btnLuu
@@ -248,7 +252,7 @@
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 26);
             this.btnLuu.TabIndex = 7;
-            this.btnLuu.Text = "Luu";
+            this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.button4_Click);
@@ -266,7 +270,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 26);
             this.btnSua.TabIndex = 6;
-            this.btnSua.Text = "Sua";
+            this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.button3_Click);
@@ -284,7 +288,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 26);
             this.btnThem.TabIndex = 6;
-            this.btnThem.Text = "Them";
+            this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.button2_Click);
@@ -298,14 +302,13 @@
             this.btnXem.ForeColor = System.Drawing.Color.Black;
             this.btnXem.Image = global::WindowsFormsApp15.Properties.Resources.sss;
             this.btnXem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXem.Location = new System.Drawing.Point(273, 60);
+            this.btnXem.Location = new System.Drawing.Point(719, 9);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(75, 26);
             this.btnXem.TabIndex = 0;
             this.btnXem.Text = "Xem";
             this.btnXem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXem.UseVisualStyleBackColor = false;
-            this.btnXem.Visible = false;
             this.btnXem.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblMon
@@ -420,7 +423,7 @@
             this.Column21});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -429,64 +432,10 @@
             this.dataGridView4.Location = new System.Drawing.Point(374, 125);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView4.Size = new System.Drawing.Size(240, 150);
             this.dataGridView4.TabIndex = 3;
             this.dataGridView4.Visible = false;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Ma hs";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Ho ten";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Ngay sinh";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Gioi tinh";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Dia chi";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "Diem vao truong";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "Ho ten bo me";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "Sdt";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "Ma lop";
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
             // 
             // dataGridView3
             // 
@@ -562,7 +511,7 @@
             this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.AllowUserToResizeColumns = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LemonChiffon;
             this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -588,9 +537,9 @@
             this.Column7});
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -600,54 +549,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(39, 150);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ma Hoc Sinh";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ho Ten";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Diem Ky 1 ";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Diem Ky 2 ";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gray;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column6.HeaderText = "Diem ky 1 Sau";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column7
-            // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gray;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column7.HeaderText = "Diem ky 2 Sau";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridView1
             // 
@@ -691,42 +592,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(880, 200);
             this.dataGridView1.TabIndex = 1;
             // 
-            // t
-            // 
-            this.t.HeaderText = "STT";
-            this.t.Name = "t";
-            this.t.ReadOnly = true;
-            // 
-            // ma
-            // 
-            this.ma.HeaderText = "Ma Hoc Sinh";
-            this.ma.Name = "ma";
-            this.ma.ReadOnly = true;
-            // 
-            // ht
-            // 
-            this.ht.HeaderText = "Ho Ten";
-            this.ht.Name = "ht";
-            this.ht.ReadOnly = true;
-            // 
-            // diem1
-            // 
-            this.diem1.HeaderText = "Diem Ky 1";
-            this.diem1.Name = "diem1";
-            this.diem1.ReadOnly = true;
-            // 
-            // Diem2
-            // 
-            this.Diem2.HeaderText = "Diem Ky 2";
-            this.Diem2.Name = "Diem2";
-            this.Diem2.ReadOnly = true;
-            // 
-            // dtb
-            // 
-            this.dtb.HeaderText = "Diem Trung Binh";
-            this.dtb.Name = "dtb";
-            this.dtb.ReadOnly = true;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pnRIGHT);
@@ -757,7 +622,11 @@
             this.toolStripButton5,
             this.txtTim,
             this.toolStripButton4,
-            this.toolStripProgressBar1});
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.cbdd,
+            this.toolStripProgressBar1,
+            this.toolStripButton3});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -768,11 +637,21 @@
             // toolStripButton5
             // 
             this.toolStripButton5.AutoSize = false;
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Enabled = false;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripButton5.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.cl;
+            this.toolStripButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStripButton5.Checked = true;
+            this.toolStripButton5.CheckOnClick = true;
+            this.toolStripButton5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
+            this.toolStripButton5.DoubleClickEnabled = true;
+            this.toolStripButton5.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton5.Image = global::WindowsFormsApp15.Properties.Resources.cl;
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.White;
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(40, 37);
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // txtTim
             // 
@@ -782,7 +661,9 @@
             this.txtTim.Size = new System.Drawing.Size(310, 40);
             this.txtTim.Enter += new System.EventHandler(this.txtTim_Enter);
             this.txtTim.Leave += new System.EventHandler(this.txtTim_Leave);
+            this.txtTim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTim_KeyPress);
             this.txtTim.Click += new System.EventHandler(this.txtTim_Click);
+            this.txtTim.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTim_MouseDown);
             // 
             // toolStripButton4
             // 
@@ -796,11 +677,51 @@
             this.toolStripButton4.Text = "Tìm";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(1, 37);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.AutoSize = false;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(5, 20);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // cbdd
+            // 
+            this.cbdd.AutoSize = false;
+            this.cbdd.Name = "cbdd";
+            this.cbdd.Size = new System.Drawing.Size(85, 23);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.AutoSize = false;
+            this.toolStripButton3.BackColor = System.Drawing.Color.Gainsboro;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.ForeColor = System.Drawing.Color.Red;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(50, 37);
+            this.toolStripButton3.Text = "Update Data";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click_1);
+            // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.AutoSize = false;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(170, 37);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(85, 37);
             this.toolStripProgressBar1.Visible = false;
             // 
             // pnLEFT
@@ -950,12 +871,143 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // backgroundWorker2
+            // t
             // 
-            this.backgroundWorker2.WorkerReportsProgress = true;
-            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
-            this.backgroundWorker2.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker2_ProgressChanged);
-            this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_RunWorkerCompleted);
+            this.t.HeaderText = "STT";
+            this.t.Name = "t";
+            this.t.ReadOnly = true;
+            // 
+            // ma
+            // 
+            this.ma.HeaderText = "Mã Học Sinh";
+            this.ma.Name = "ma";
+            this.ma.ReadOnly = true;
+            // 
+            // ht
+            // 
+            this.ht.HeaderText = "Họ Tên";
+            this.ht.Name = "ht";
+            this.ht.ReadOnly = true;
+            // 
+            // diem1
+            // 
+            this.diem1.HeaderText = "Điểm Kỳ 1";
+            this.diem1.Name = "diem1";
+            this.diem1.ReadOnly = true;
+            // 
+            // Diem2
+            // 
+            this.Diem2.HeaderText = "Điểm Kỳ 2";
+            this.Diem2.Name = "Diem2";
+            this.Diem2.ReadOnly = true;
+            // 
+            // dtb
+            // 
+            this.dtb.HeaderText = "Điểm Trung Bình";
+            this.dtb.Name = "dtb";
+            this.dtb.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Ma hs";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Họ Tên";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Ngày sinh";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Giới Tính";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Địa Chỉ";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "Điểm Vào Trường";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "Họ Tên Bố Mẹ";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "Sdt";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "Mã Lớp";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã Học Sinh";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Họ Tên";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Điểm Kỳ 1 ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Điểm Kỳ 2";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gray;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column6.HeaderText = "Điểm Kỳ 1 Sau";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gray;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Column7.HeaderText = "Điểm Kỳ 2 Sau";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // QuanLyDiem
             // 
@@ -1010,20 +1062,7 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn t;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diem1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diem2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtb;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Panel pnRIGHT;
         private System.Windows.Forms.Panel pnLEFT;
         private System.Windows.Forms.Panel panel6;
@@ -1055,8 +1094,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripComboBox cbdd;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
@@ -1066,5 +1108,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn t;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diem1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diem2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtb;
     }
 }

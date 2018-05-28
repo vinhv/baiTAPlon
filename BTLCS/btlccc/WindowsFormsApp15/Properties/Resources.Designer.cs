@@ -153,6 +153,16 @@ namespace WindowsFormsApp15.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cl {
+            get {
+                object obj = ResourceManager.GetObject("cl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crea {
             get {
                 object obj = ResourceManager.GetObject("Crea", resourceCulture);
@@ -416,6 +426,26 @@ namespace WindowsFormsApp15.Properties {
         internal static System.Drawing.Bitmap Very_Basic_Menu_icon1 {
             get {
                 object obj = ResourceManager.GetObject("Very-Basic-Menu-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vv {
+            get {
+                object obj = ResourceManager.GetObject("vv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vv1 {
+            get {
+                object obj = ResourceManager.GetObject("vv1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

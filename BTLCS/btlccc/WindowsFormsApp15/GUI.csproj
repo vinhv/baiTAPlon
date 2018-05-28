@@ -52,11 +52,23 @@
     <Compile Include="DanhSachGiaoVien.designer.cs">
       <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="diemdialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diemdialog.Designer.cs">
+      <DependentUpon>diemdialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homeDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homeDiem.Designer.cs">
+      <DependentUpon>homeDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="HoSoHocSinh.cs">
       <SubType>Form</SubType>
@@ -141,11 +153,17 @@
     <EmbeddedResource Include="DanhSachGiaoVien.resx">
       <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="diemdialog.resx">
+      <DependentUpon>diemdialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeDiem.resx">
+      <DependentUpon>homeDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoSoHocSinh.resx">
       <DependentUpon>HoSoHocSinh.cs</DependentUpon>
@@ -321,6 +339,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dd1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vv1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

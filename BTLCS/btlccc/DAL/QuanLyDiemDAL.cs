@@ -305,5 +305,23 @@ namespace DAL
             Close();
             return true;
         }
+        public void TaoMoi(string maHS, string maMon)
+        {
+            Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into Diem values(@mahs,@mamon,NULL,NULL) ";
+            cmd.Connection = conn;
+
+            cmd.Parameters.Add("@mahs", SqlDbType.NVarChar).Value = maHS;
+            cmd.Parameters.Add("@mamon", SqlDbType.NVarChar).Value = maMon;
+           
+            cmd.ExecuteNonQuery();
+     
+            Close();
+           
+        }
     }
+
+    
 }

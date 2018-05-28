@@ -241,6 +241,11 @@ namespace WindowsFormsApp15
 
         }
 
+        private void BaoForm_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnThongKEGiaoVien_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex=6;

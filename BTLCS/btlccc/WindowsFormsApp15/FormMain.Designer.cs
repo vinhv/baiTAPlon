@@ -764,6 +764,7 @@
             this.BaoForm.Name = "BaoForm";
             this.BaoForm.Size = new System.Drawing.Size(377, 325);
             this.BaoForm.TabIndex = 2;
+            this.BaoForm.Paint += new System.Windows.Forms.PaintEventHandler(this.BaoForm_Paint_1);
             // 
             // BaoFor
             // 

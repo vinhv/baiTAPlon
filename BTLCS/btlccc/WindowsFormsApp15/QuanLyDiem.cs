@@ -113,11 +113,36 @@ namespace WindowsFormsApp15
             txtTim.Text = "Mã môn + Tên môn trong combobox :)) or Mã Hoc Sinh";
             txtTim.ForeColor = Color.Gray;
         }
+        //tao ra combo diem
+        List<string> LoaiDiem = new List<string>() { "Điểm 2 kỳ", "Điểm Kỳ 1", "Điểm Kỳ 2" };
+        List<string> hhhh = new List<string>() { "Tìm điểm", "Tìm hồ sơ" };
+        homeDiem aa = new homeDiem();
+
         private void QuanLyDiem_Load(object sender, EventArgs e)
         {
+           
+            aa.magv = MAGV;
+            //my home
+
+            if (Application.OpenForms["homeDiem"] as homeDiem == null)
+            {
+                aa.Show();
+            }
+            aa.TopLevel = false;
+            aa.AutoScroll = true;
+            aa.FormBorderStyle = FormBorderStyle.None;
+            CH("aa");
+            //aa.MdiParent = this;
+
+
+            ACThem = false;
+            ACSua = false;
+
+            cbdd.ComboBox.DataSource = hhhh;
+            cbdd.ComboBox.SelectedIndex = 0;
             //thayfont
             ThayFont();
-            
+
             btnLuu.Enabled = false;
             toolSave.Enabled = false;
             //tim CAC LOP CAC MON MA GIAO VIEN DANG DANG NHAP DAY
@@ -131,12 +156,12 @@ namespace WindowsFormsApp15
         private bool btnTHemACTIVE = false;
         private bool btnSUAACTIVE = false;
         //Lay ra ma lop dang duoc chon
-        
+
         private void HienThiListView()
         {
             #region Lay Ma LOp , Mamon duoc chon
             int l;
-            string maLop="";
+            string maLop = "";
             if (cbTenLop.SelectedIndex != -1)
             {
                 l = cbTenLop.SelectedIndex;
@@ -157,11 +182,11 @@ namespace WindowsFormsApp15
             }
             //Lay MAMOn duoc chon va co day
             int bb;
-            string mam="";
+            string mam = "";
             if (cbTenMon.SelectedIndex != -1)
             {
-                 bb = cbTenMon.SelectedIndex;
-                 mam = maMon[bb];
+                bb = cbTenMon.SelectedIndex;
+                mam = maMon[bb];
             }
 
             #endregion
@@ -172,10 +197,10 @@ namespace WindowsFormsApp15
                 foreach (string hs in MaHoc)
                 {
 
-                    
+
                     if (item.MaHocSinh == hs && item.MaMonHoc == mam)
                     {
-                        double tb=0;
+                        double tb = 0;
                         DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[STT].Clone();
                         row.Cells[0].Value = STT.ToString();
                         row.Cells[1].Value = item.MaHocSinh;
@@ -197,11 +222,11 @@ namespace WindowsFormsApp15
                         if (item.DiemKy1 != -1 && item.DiemKy2 == -1)
                             tb = item.DiemKy1;
                         if (item.DiemKy1 == -1 && item.DiemKy2 == -1)
-                            tb =-1;
-                        if(tb==-1)
-                            row.Cells[5].Value ="";
+                            tb = -1;
+                        if (tb == -1)
+                            row.Cells[5].Value = "";
                         else
-                        row.Cells[5].Value = tb.ToString();
+                            row.Cells[5].Value = tb.ToString();
                         dataGridView1.Rows.Add(row);
                         STT++;
                     }
@@ -214,7 +239,7 @@ namespace WindowsFormsApp15
             HoTenHS.Clear();
 
         }
-        
+
         //them moi
 
         private void ThemMoiHT()
@@ -274,34 +299,10 @@ namespace WindowsFormsApp15
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        //private void cbTenMon_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (cbTenMon.SelectedIndex != -1)
-        //    {
-        //        lblMon.Text = cbTenMon.SelectedItem.ToString();
-        //        int k = cbTenMon.SelectedIndex;
-        //        labelmamon.Text = maMon[k];
-        //    }
-        //}
-
-        //private void cbTenLop_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (cbTenLop.SelectedIndex != -1)
-        //    {
-        //        lblLOp.Text = cbTenLop.SelectedItem.ToString();
-        //        int k = cbTenLop.SelectedIndex;
-        //        lblMa.Text = MaLop[k];
-        //    }
-           
-        //}
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
+
+
         //hien thi
         private string MamonLay = "";
         //hoi btn sua
@@ -318,9 +319,11 @@ namespace WindowsFormsApp15
             dataGridView2.Columns[6].ReadOnly = true;
             dataGridView3.Columns[3].ReadOnly = true;
             dataGridView3.Columns[4].ReadOnly = true;
-            
-        }
 
+        }
+        //gia tri luu dang o chuc nang nao
+        private bool ACThem = false;
+        private bool ACSua = false;
         private bool tCK()
         {
             if (txtTim.Text == "Mã môn + Tên môn trong combobox :)) or Mã Hoc Sinh" || txtTim.ForeColor == Color.Gray)
@@ -330,83 +333,200 @@ namespace WindowsFormsApp15
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //combodiem.ComboBox.SelectedIndex = 0;
             if (tCK())
             {
-                //kiem tra btn
-                LuubtnMoi = false;
-                LuubtnSua = false;
-                LuubtnThem = false;
-
-                unEDA1();
-
-                if (btnSUAACTIVE)
+                if (cbdd.ComboBox.SelectedIndex == 0)
                 {
-                    HOiBTNsua();
-                }
-                if (btnTHemACTIVE)
-                {
-                    HoiBtnTHem();
-                }
+                    //kiem tra btn
+                    LuubtnMoi = false;
+                    LuubtnSua = false;
+                    LuubtnThem = false;
+                    //ko cho ghi du lieu
+                    unEDA1();
 
-                btnSUAACTIVE = false;
-                btnTHemACTIVE = false;
+                    if (btnSUAACTIVE)
+                    {
+                        HOiBTNsua();
+                    }
+                    if (btnTHemACTIVE)
+                    {
+                        HoiBtnTHem();
+                    }
 
-                if (dataGridView1.Visible == false)
-                    CH("dataGridView1");
-                int k = 0;
-                if (cbTenMon.SelectedIndex != -1)
-                {
-                    k = cbTenMon.SelectedIndex;
-                    MamonLay = maMon[k];
+                    btnSUAACTIVE = false;
+                    btnTHemACTIVE = false;
+
+                    if (dataGridView1.Visible == false)
+                        CH("dataGridView1");
+                    int k = 0;
+                    if (cbTenMon.SelectedIndex != -1)
+                    {
+                        k = cbTenMon.SelectedIndex;
+                        MamonLay = maMon[k];
+                    }
+
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.Refresh();
+                    STT = 0;
+                    // if(tCK())
+                    HienThiListView();
                 }
+                else
+                    MessageBox.Show("Bạn cần nhập mã học sinh để tìm ", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-                dataGridView1.Rows.Clear();
-                dataGridView1.Refresh();
-                STT = 0;
-                // if(tCK())
-                HienThiListView();
 
             }
-            else
+            if (!tCK())
 
             {
-                //kiem tra btn
-                LuubtnMoi = false;
-                LuubtnSua = false;
-                LuubtnThem = false;
-
-               // unEDA1();
-
-                if (btnSUAACTIVE)
+                if (cbdd.ComboBox.SelectedIndex == 1)
                 {
-                    HOiBTNsua();
+                    //kiem tra btn
+                    LuubtnMoi = false;
+                    LuubtnSua = false;
+                    LuubtnThem = false;
+
+                    // unEDA1();
+
+                    if (btnSUAACTIVE)
+                    {
+                        HOiBTNsua();
+                    }
+                    if (btnTHemACTIVE)
+                    {
+                        HoiBtnTHem();
+                    }
+
+                    btnSUAACTIVE = false;
+                    btnTHemACTIVE = false;
+
+                    if (dataGridView4.Visible == false)
+                        CH("dataGridView4");
+                    int k = 0;
+                    if (cbTenMon.SelectedIndex != -1)
+                    {
+                        k = cbTenMon.SelectedIndex;
+                        MamonLay = maMon[k];
+                    }
+
+                    dataGridView4.Rows.Clear();
+                    dataGridView4.Refresh();
+                    STT = 0;
+                    // if(tCK())
+                    Hths();
                 }
-                if (btnTHemACTIVE)
+                if (cbdd.ComboBox.SelectedIndex == 0)
                 {
-                    HoiBtnTHem();
+                    //tim theo diem hoc sinh
+
+                    //tim theo 
+                    if (!ACSua && !ACThem)
+                    {
+
+                        //kiem tra btn
+                        LuubtnMoi = false;
+                        LuubtnSua = false;
+                        LuubtnThem = false;
+                        //ko cho ghi du lieu
+                        unEDA1();
+
+                        if (btnSUAACTIVE)
+                        {
+                            HOiBTNsua();
+                        }
+                        if (btnTHemACTIVE)
+                        {
+                            HoiBtnTHem();
+                        }
+
+                        btnSUAACTIVE = false;
+                        btnTHemACTIVE = false;
+
+                        if (dataGridView1.Visible == false)
+                            CH("dataGridView1");
+                        int k = 0;
+                        if (cbTenMon.SelectedIndex != -1)
+                        {
+                            k = cbTenMon.SelectedIndex;
+                            MamonLay = maMon[k];
+                        }
+
+                        dataGridView1.Rows.Clear();
+                        dataGridView1.Refresh();
+                        STT = 0;
+                        // if(tCK())
+                        HienThiListView();
+                        dataGridView1.ClearSelection();
+                        bool ggg = false;
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                        {
+                            if (dataGridView1.Rows[i].Cells[1].Value.ToString() == txtTim.Text)
+                            {
+                                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                                dataGridView1.Rows[i].Selected = true;
+                                ggg = true;
+                                break;
+                            }
+
+
+
+                        }
+                        if (!ggg)
+                            MessageBox.Show("Không tìm thấy học sinh có mã +" + txtTim.Text, "null", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Warning);
+
+
+                    }
+                    if (ACSua)
+                    {
+                        button3_Click(null, null);
+                        bool ggg = false;
+                        dataGridView2.ClearSelection();
+                        for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+                        {
+                            if (dataGridView2.Rows[i].Cells[1].Value.ToString() == txtTim.Text)
+                            {
+                                dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                                dataGridView2.Rows[i].Selected = true;
+                                ggg = true;
+                                break;
+                            }
+
+                        }
+                        if (!ggg)
+                            MessageBox.Show("Không tìm thấy học sinh có mã +" + txtTim.Text, "null", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Warning);
+
+                    }
+                    else if (ACThem)
+                    {
+                        button2_Click(null, null);
+                        bool ggg = false;
+                        dataGridView1.ClearSelection();
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                        {
+                            if (dataGridView1.Rows[i].Cells[1].Value.ToString() == txtTim.Text)
+                            {
+                                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                                dataGridView1.Rows[i].Selected = true;
+                                ggg = true;
+                                break;
+                            }
+
+                        }
+                        if (!ggg)
+                            MessageBox.Show("Không tìm thấy học sinh có mã +" + txtTim.Text, "null", MessageBoxButtons.OK,
+                                   MessageBoxIcon.Warning);
+
+
+                    }
                 }
-
-                btnSUAACTIVE = false;
-                btnTHemACTIVE = false;
-
-                if (dataGridView4.Visible == false)
-                    CH("dataGridView4");
-                int k = 0;
-                if (cbTenMon.SelectedIndex != -1)
-                {
-                    k = cbTenMon.SelectedIndex;
-                    MamonLay = maMon[k];
-                }
-
-                dataGridView4.Rows.Clear();
-                dataGridView4.Refresh();
-                STT = 0;
-                // if(tCK())
-                Hths();
             }
+
             btnLuu.Enabled = false;
             toolSave.Enabled = false;
-           
+
 
         }
 
@@ -428,7 +548,7 @@ namespace WindowsFormsApp15
                 }
             }
 
-            
+
         }
         private void Hths()
         {
@@ -456,6 +576,12 @@ namespace WindowsFormsApp15
                             row.Cells[8].Value = hs.MaLop;
 
                             dataGridView4.Rows.Add(row);
+                            dataGridView4.Columns[1].Width = 200;
+                            dataGridView4.Columns[0].Width = 60;
+                            dataGridView4.Columns[2].Width = 130;
+                            dataGridView4.Columns[7].Width = 100;
+                            dataGridView4.Rows[1].Clone();
+                            dataGridView4.ClearSelection();
                             g = true;
                             break;
 
@@ -466,20 +592,20 @@ namespace WindowsFormsApp15
 
             }
             if (!g)
-                MessageBox.Show("Khong thay hoc sinh co ma: " + txtTim, "null", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Không tìm thấy học sinh có mã: " + txtTim.Text, "null", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         //CHeck btn sua
         private void CheckBTNSUA()
         {
 
-            
+
         }
         //enable cell input data
         private void ENA()
         {
             if (dataGridView1.Rows.Count == 1)
             {
-                MessageBox.Show("Chưa có HỌC SINH làm sao mà nhập điểm  !!!", "");
+                MessageBox.Show("Chưa có HỌC SINH làm sao mà nhập điểm  !!! Có thể cần cập nhật", "");
             }
             else
             {
@@ -530,13 +656,14 @@ namespace WindowsFormsApp15
         {
             //ht
 
-         
+            ACThem = true;
+            ACSua = false;
             unEDA1();
-       
+
             LuubtnMoi = false;
             LuubtnSua = false;
             LuubtnThem = true;
-         
+
             if (dataGridView1.Visible == false)
                 CH("dataGridView1");
             int k = 0;
@@ -551,10 +678,10 @@ namespace WindowsFormsApp15
             STT = 0;
             HienThiListView();
             btnTHemACTIVE = true;
-            if(btnSUAACTIVE)
+            if (btnSUAACTIVE)
                 CheckBTNSUA();
             ENA();
-            
+
         }
         //btn LUU
         private void button4_Click(object sender, EventArgs e)
@@ -571,7 +698,7 @@ namespace WindowsFormsApp15
                         MessageBox.Show("Thêm thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         t = false;
                         /// dataGridView1.Rows[item].Selected = true;
-                        
+
                         break;
 
                     }
@@ -612,25 +739,30 @@ namespace WindowsFormsApp15
                     dataGridView1.Refresh();
                     MessageBox.Show("Thêm thành công", "success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     toolStripProgressBar1.Visible = true;
-                    backgroundWorker1.RunWorkerAsync();
+                    try
+                    {
+                        backgroundWorker1.RunWorkerAsync();
+                    }
+                    catch (Exception ex)
+                    { }
                     button2_Click(null, null);
                     //  btnLuu.Enabled = false;
 
                 }
-               
+
             }
             //xoa
             if (LuubtnSua)
             {
-                int m = 0,c=0;
+                int m = 0, c = 0;
                 bool t = true;
-                for(int i=0;i<dataGridView2.Rows.Count-1;i++)
+                for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
                 {
                     if (dataGridView2.Rows[i].Cells[1].Value != null)
                     {
                         bool ck = true, ck1 = true;
 
-                        if (dataGridView2.Rows[i].Cells[5].Value == null || dataGridView2.Rows[i].Cells[5].Value.ToString()=="")
+                        if (dataGridView2.Rows[i].Cells[5].Value == null || dataGridView2.Rows[i].Cells[5].Value.ToString() == "")
                             ck = ql.Suadiem1(
                                                      dataGridView2.Rows[i].Cells[1].Value.ToString(),
                                                      MamonLay,
@@ -653,10 +785,10 @@ namespace WindowsFormsApp15
 
                         }
 
-                       // System.Threading.Thread.Sleep(500);
+                        // System.Threading.Thread.Sleep(500);
                         //diem 2
 
-                        if (dataGridView2.Rows[i].Cells[6].Value == null || dataGridView2.Rows[i].Cells[6].Value.ToString()=="")
+                        if (dataGridView2.Rows[i].Cells[6].Value == null || dataGridView2.Rows[i].Cells[6].Value.ToString() == "")
                             ck1 = ql.Suadiem2(
                                                      dataGridView2.Rows[i].Cells[1].Value.ToString(),
                                                      MamonLay,
@@ -691,55 +823,31 @@ namespace WindowsFormsApp15
                 if (!t)
                 {
                     dataGridView2.Refresh();
-                    dataGridView2.CurrentCell = dataGridView2[c, m ];
-                    
+                    dataGridView2.CurrentCell = dataGridView2[c, m];
+
                 }
-               
-                
+
+
                 if (t)
                 {
                     dataGridView2.Refresh();
-                    MessageBox.Show("Sua thành công", "success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Sửa thành công ", "success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     toolStripProgressBar1.Visible = true;
-                    backgroundWorker1.RunWorkerAsync();
+                    try
+                    {
+                        backgroundWorker1.RunWorkerAsync();
+                    }
+                    catch (Exception ex)
+                    { }
                     button3_Click(null, null);
                     // btnLuu.Enabled = false;
 
                 }
-                
+
             }
             //btnLuu.Enabled = false;
 
-            if (LuubtnMoi)
-            {
-                if (dataGridView3.SelectedRows.Count > 0)
-                {
-                    DialogResult d = MessageBox.Show("Ban co muon thuc su them cac hoc sinh nay vao bang diem ???", "questn", MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
-                    if (d == DialogResult.Yes)
-                    {
 
-                        for (int i = 0; i < dataGridView3.Rows.Count - 1; i++)
-                        {
-                            if (dataGridView3.Rows[i].Selected == true)
-                                ql.THemDiemMOI(dataGridView3.Rows[i].Cells[1].Value.ToString(), MamonLay, "", "");
-                        }
-                        toolStripProgressBar1.Visible = true;
-                        backgroundWorker1.RunWorkerAsync();
-                        MessageBox.Show("Them moi thanh cong ", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    }
-                    else
-                    {
-                        return;
-                    }
-                    btnMoi_Click(null, null);
-                }
-                else
-                {
-                    MessageBox.Show("can chon de them vao bao diem ","",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                }
-            }
             //btnLuu.Enabled = false;
 
 
@@ -755,35 +863,59 @@ namespace WindowsFormsApp15
                 dataGridView1.Visible = false;
                 dataGridView3.Dock = DockStyle.None;
                 dataGridView3.Visible = false;
-
+                aa.Dock = DockStyle.None;
+                aa.Visible = false;
+                pnDiem.Controls.Remove(aa);
                 dataGridView2.Visible = true;
                 dataGridView2.Dock = DockStyle.Fill;
             }
             if (Name == "dataGridView1")
             {
+                aa.Dock = DockStyle.None;
+                aa.Visible = false;
                 dataGridView4.Dock = DockStyle.None;
                 dataGridView4.Visible = false;
                 dataGridView3.Dock = DockStyle.None;
                 dataGridView3.Visible = false;
                 dataGridView2.Dock = DockStyle.None;
                 dataGridView2.Visible = false;
+                pnDiem.Controls.Remove(aa);
                 dataGridView1.Visible = true;
                 dataGridView1.Dock = DockStyle.Fill;
             }
             if (Name == "dataGridView3")
             {
+                aa.Dock = DockStyle.None;
+                aa.Visible = false;
                 dataGridView4.Dock = DockStyle.None;
                 dataGridView4.Visible = false;
                 dataGridView1.Dock = DockStyle.None;
                 dataGridView1.Visible = false;
                 dataGridView2.Dock = DockStyle.None;
                 dataGridView2.Visible = false;
-
+                pnDiem.Controls.Remove(aa);
                 dataGridView3.Visible = true;
                 dataGridView3.Dock = DockStyle.Fill;
             }
             if (Name == "dataGridView4")
             {
+                aa.Dock = DockStyle.None;
+                aa.Visible = false;
+
+                dataGridView1.Dock = DockStyle.None;
+                dataGridView1.Visible = false;
+                dataGridView2.Dock = DockStyle.None;
+                dataGridView2.Visible = false;
+
+                dataGridView3.Visible = false;
+                dataGridView3.Dock = DockStyle.None;
+                pnDiem.Controls.Remove(aa);
+                dataGridView4.Visible = true;
+                dataGridView4.Dock = DockStyle.Fill;
+            }
+            if (Name == "aa")
+            {
+
                 dataGridView1.Dock = DockStyle.None;
                 dataGridView1.Visible = false;
                 dataGridView2.Dock = DockStyle.None;
@@ -792,12 +924,16 @@ namespace WindowsFormsApp15
                 dataGridView3.Visible = false;
                 dataGridView3.Dock = DockStyle.None;
 
-                dataGridView4.Visible = true;
-                dataGridView4.Dock = DockStyle.Fill;
+                dataGridView4.Visible = false;
+                dataGridView4.Dock = DockStyle.None;
+                pnDiem.Controls.Add(aa);
+                aa.Dock = DockStyle.Fill;
+                aa.Visible = true;
+
             }
         }
         //khong ht data2
-       
+
         private void Hienthidata2()
         {
             STT = 0;
@@ -884,7 +1020,7 @@ namespace WindowsFormsApp15
             //    dataGridView2[5, r].Selected = true;
             //    dataGridView2[6, r].Selected = true;
             //}
-          
+
             MaHoc.Clear();
             HoTenHS.Clear();
         }
@@ -894,26 +1030,27 @@ namespace WindowsFormsApp15
         //enable sua
         private void ENASUA()
         {
-           // for(int i=0)
+            // for(int i=0)
             for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
             {
                 dataGridView2.Rows[i].Cells[5].ReadOnly = false;
                 dataGridView2.Rows[i].Cells[6].ReadOnly = false;
-               
+
             }
         }
         //btn SUA
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
-         
+            ACThem = false;
+            ACSua = true;
             unEDA1();
-       
-            LuubtnMoi = false; 
+
+            LuubtnMoi = false;
             LuubtnSua = true;
             LuubtnThem = false;
             //lay mamon
-          
+
             int k = 0;
             if (cbTenMon.SelectedIndex != -1)
             {
@@ -923,37 +1060,42 @@ namespace WindowsFormsApp15
 
             btnSUAACTIVE = true;
             if (btnTHemACTIVE)
-                 CheckbtnTHEM();
+                CheckbtnTHEM();
             if (dataGridView2.Visible == false)
-                 CH("dataGridView2");
+                CH("dataGridView2");
             dataGridView2.Rows.Clear();
             dataGridView2.Refresh();
             Hienthidata2();
-            dataGridView2.Columns[5].DefaultCellStyle.BackColor = Color.Gray;
-            dataGridView2.Columns[6].DefaultCellStyle.BackColor = Color.Gray;
+            dataGridView2.Columns[5].DefaultCellStyle.BackColor = Color.White;
+            dataGridView2.Columns[6].DefaultCellStyle.BackColor = Color.WhiteSmoke;
             if (dataGridView2.Rows.Count == 1)
             {
-                MessageBox.Show("Đã có Học Sinh nào đâu mà Sửa điểm :)))");
+                MessageBox.Show("Đã có Học Sinh nào đâu mà Sửa điểm . Có thể cần cập nhật ");
             }
             else
                 ENASUA();
             btnLuu.Enabled = true;
             toolSave.Enabled = true;
-            
+
 
         }
 
-       
-     
-     
+
+
+
         //tim
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             toolStripProgressBar1.Visible = true;
-            backgroundWorker1.RunWorkerAsync();
+            try
+            {
+                backgroundWorker1.RunWorkerAsync();
+            }
+            catch (Exception ex)
+            { }
             System.Threading.Thread.Sleep(10);
             button1_Click_1(null, null);
-           
+
         }
         //goi su kien button luu click
         private void saveToolStripButton_Click_1(object sender, EventArgs e)
@@ -966,7 +1108,7 @@ namespace WindowsFormsApp15
             txtTim.Text = "";
             txtTim.ForeColor = Color.Black;
         }
-       
+
 
         private void txtTim_Enter(object sender, EventArgs e)
         {
@@ -975,7 +1117,7 @@ namespace WindowsFormsApp15
 
         private void txtTim_Leave(object sender, EventArgs e)
         {
-            ThayFont();
+            // ThayFont();
         }
 
         private void cbTenLop_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -1000,29 +1142,49 @@ namespace WindowsFormsApp15
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i <= 100;i= i+2)
+            for (int i = 0; i <= 100; i = i + 5)
             {
                 int per = i * 100 / 100;
-                backgroundWorker1.ReportProgress(per,i);
-                System.Threading.Thread.Sleep(1);
+                try
+                {
+                    backgroundWorker1.ReportProgress(per, i);
+                    System.Threading.Thread.Sleep(90);
+                }
+                catch (Exception ex)
+                { return; }
                 // System.Threading.Thread.Sleep(100);
             }
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            toolStripProgressBar1.Value = e.ProgressPercentage;
+            try
+            {
+                toolStripProgressBar1.Value = e.ProgressPercentage;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            toolStripProgressBar1.Value = 0;
-            toolStripProgressBar1.Visible = false;
+            try
+            {
+                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar1.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void toolMoi_Click(object sender, EventArgs e)
         {
-            btnMoi_Click(null, null);
+            CH("aa");
+            Refresh();
         }
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
@@ -1030,21 +1192,42 @@ namespace WindowsFormsApp15
             for (int i = 0; i <= 100; i = i + 1)
             {
                 int per = i * 100 / 100;
-                backgroundWorker2.ReportProgress(per, i);
-                System.Threading.Thread.Sleep(1);
+                try
+                {
+                    //backgroundWorker2.ReportProgress(per, i);
+                    System.Threading.Thread.Sleep(10);
+                }
+                catch (Exception ex)
+                {
+                    return;
+                }
                 // System.Threading.Thread.Sleep(100);
             }
         }
 
         private void backgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            toolStripProgressBar1.Value = e.ProgressPercentage;
+            try
+            {
+                toolStripProgressBar1.Value = e.ProgressPercentage;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            toolStripProgressBar1.Value = 0;
-            toolStripProgressBar1.Visible = false;
+            try
+            {
+                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar1.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void txtTim_Click(object sender, EventArgs e)
@@ -1052,15 +1235,100 @@ namespace WindowsFormsApp15
 
         }
 
+        private void combodiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            ThayFont();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            ThayFont();
+        }
+
+        private void txtTim_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtTim_MouseDown(object sender, MouseEventArgs e)
+        {
+            TroveFont();
+        }
+
         //goi sukien button them click
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             button2_Click(null, null);
         }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+           
+        }
+
+
+     
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("Cập nhật dữ liệu sẽ mất một khoảng thời gian \nBạn có thực sự muốn cập nhật không ?",
+                "Lâu", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            if (d == DialogResult.Yes)
+            {
+                DialogResult dd = MessageBox.Show("Việc Câp nhật sẽ mất khoảng 5 phút !! ?",
+                "Lâu", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (dd == DialogResult.Yes)
+                {
+                    Insertt();
+
+
+                    MessageBox.Show("Thành công ", "");
+                }
+              
+
+            }
+            else
+                return;
+        }
+        bool ff = false;
+        private void backgroundWorker3_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i <= 100; i ++)
+            {
+                int per = i * 100 / 100;
+                //backgroundWorker3.ReportProgress(per, i);
+                System.Threading.Thread.Sleep(10);
+                // System.Threading.Thread.Sleep(100);
+            }
+        }
+
+        private void backgroundWorker3_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            toolStripProgressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker3_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            toolStripProgressBar1.Value = 0;
+            ff = true;
+            //toolStripProgressBar1.Visible = false;
+        }
+
+
+
         //goi su kien button sua click
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             button3_Click(null, null);
+        }
+
+        private void button1_Click_4(object sender, EventArgs e)
+        {
+
         }
 
         private void helpToolStripButton_Click_1(object sender, EventArgs e)
@@ -1085,44 +1353,48 @@ namespace WindowsFormsApp15
         }
         private void btnMoi_Click(object sender, EventArgs e)
         {
-            toolStripProgressBar1.Visible = true;
-            backgroundWorker2.RunWorkerAsync();
-           // System.Threading.Thread.Sleep(5000);
-            
-            unEDA1();
 
-            LuubtnMoi = true;
-            LuubtnSua = false;
-            LuubtnThem = false;
-            //lay mamon
 
-            int k = 0;
-            if (cbTenMon.SelectedIndex != -1)
+
+        }
+
+        //tu dong insert
+        private bool km = true;
+        public void Insertt()
+        {
+            List<string> HS = new List<string>();
+            //lay hoc sinh hoc lop co giao day
+            foreach (var ma in MaLop)
             {
-                k = cbTenMon.SelectedIndex;
-                MamonLay = maMon[k];
+                foreach (var item in ql.dsHs())
+                {
+                    if (ma == item.MaLop)
+                        HS.Add(item.MaHocSinh);
+                }
             }
 
-            if (dataGridView3.Visible == false)
-                CH("dataGridView3");
-            dataGridView3.Rows.Clear();
-            dataGridView3.Refresh();
-            STT = 0;
-            ThemMoiHT();
-            dataGridView3.Columns[3].DefaultCellStyle.BackColor = Color.Tomato;
-            dataGridView3.Columns[4].DefaultCellStyle.BackColor = Color.Tomato;
-            dataGridView3.ClearSelection();
-            if (dataGridView3.Rows.Count == 1)
+            foreach (var hs in HS)
             {
-                MessageBox.Show("Tất cả học sinh trong lớp đều đã được thêm vào bảng điểm :)))");
+                foreach (var mm in maMon)
+                {
+                    bool k = true;
+                    foreach (var d in ql.dsDiem())
+                    {
+                        if (d.MaHocSinh == hs && d.MaMonHoc == mm)
+                        {
+                            //insert 
+                            // ql.ttt(hs,mm);
+                            k = false;
+                            break;
+                        }
+                    }
+                    if (k)
+                    {
+                        ql.ttt(hs, mm);
+                    }
+                }
             }
-            else
-            {
-               // ENAMOI();
-                btnLuu.Enabled = true;
-                toolSave.Enabled = true;
-            }
-
+            km = false;
         }
     }
 }

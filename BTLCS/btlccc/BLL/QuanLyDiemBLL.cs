@@ -164,5 +164,10 @@ namespace BLL
             return ql.MoiDiem(maHS,maMon,123,456);
            
         }
+
+        public void ttt(string maHS, string maMon)
+        {
+             ql.TaoMoi(maHS,maMon);
+        }
     }
 }

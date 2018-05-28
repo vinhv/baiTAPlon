@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp15
 {
-    partial class PhanCongGiangDay
+    partial class home
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(608, 88);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "afasfasfafs";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel1.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.dd1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(658, 249);
+            this.panel1.TabIndex = 0;
             // 
-            // PhanCongGiangDay
+            // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 336);
-            this.Controls.Add(this.button1);
-            this.Name = "PhanCongGiangDay";
-            this.Text = "sasdasd";
-            this.Load += new System.EventHandler(this.PhanCongGiangDay_Load);
+            this.ClientSize = new System.Drawing.Size(658, 390);
+            this.Controls.Add(this.panel1);
+            this.Name = "home";
+            this.Text = "home";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

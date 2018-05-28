@@ -1,4 +1,4 @@
-﻿namespace QuanLyCBGV
+﻿namespace WindowsFormsApp15
 {
     partial class frmQLDMGiaoVien
     {

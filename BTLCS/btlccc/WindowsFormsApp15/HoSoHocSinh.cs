@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCBGV
+namespace WindowsFormsApp15
 {
     public partial class frmHoSoHocSinh : Form
     {

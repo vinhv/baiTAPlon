@@ -110,7 +110,6 @@ C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\bin\Deb
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.FormMain.resources
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.login.resources
-C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.PhanCongGiangDay.resources
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Properties.Resources.resources
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.QuanLyDiem.resources
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.QuanLyGiaovien.resources
@@ -156,8 +155,9 @@ D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\GUI.csproj.GenerateRes
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.DanhSachGiaoVien.resources
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmHoSoHocSinh.resources
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmQLDMGiaoVien.resources
-C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.DanhSachGiaoVien.resources
-C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmHoSoHocSinh.resources
-C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\PhanCongGD.PhanCongGD.resources
-C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\QuanLyCBGV.frmQLDMGiaoVien.resources
 D:\Git\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.PhanCongGD.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.PhanCongGD.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.DanhSachGiaoVien.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.frmHoSoHocSinh.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.frmQLDMGiaoVien.resources
+C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.home.resources

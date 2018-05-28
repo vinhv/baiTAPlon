@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyCBGV
+namespace WindowsFormsApp15
 {
     public partial class DanhSachGiaoVien : Form
     {
         public DanhSachGiaoVien()
         {
             InitializeComponent();
+        }
+
+        private void DanhSachGiaoVien_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -951,7 +951,7 @@ namespace WindowsFormsApp15
         {
             toolStripProgressBar1.Visible = true;
             backgroundWorker1.RunWorkerAsync();
-            System.Threading.Thread.Sleep(1);
+            System.Threading.Thread.Sleep(10);
             button1_Click_1(null, null);
            
         }

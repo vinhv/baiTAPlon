@@ -1,4 +1,4 @@
-﻿namespace QuanLyCBGV
+﻿namespace WindowsFormsApp15
 {
     partial class DanhSachGiaoVien
     {
@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboTenLop = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -42,47 +43,54 @@
             this.danhSáchGVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýCBGVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 96);
+            this.label1.Location = new System.Drawing.Point(115, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(47, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Lớp";
             // 
             // cboTenLop
             // 
             this.cboTenLop.FormattingEnabled = true;
-            this.cboTenLop.Location = new System.Drawing.Point(187, 93);
+            this.cboTenLop.Location = new System.Drawing.Point(187, 100);
             this.cboTenLop.Name = "cboTenLop";
-            this.cboTenLop.Size = new System.Drawing.Size(188, 21);
+            this.cboTenLop.Size = new System.Drawing.Size(188, 22);
             this.cboTenLop.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 134);
+            this.groupBox1.Location = new System.Drawing.Point(12, 144);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(640, 360);
+            this.groupBox1.Size = new System.Drawing.Size(640, 388);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 53);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(628, 328);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // btnOk
             // 
-            this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOk.Location = new System.Drawing.Point(407, 84);
+            this.btnOk.Location = new System.Drawing.Point(407, 90);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(59, 37);
+            this.btnOk.Size = new System.Drawing.Size(59, 40);
             this.btnOk.TabIndex = 3;
             this.btnOk.Text = "OK";
             this.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -90,12 +98,12 @@
             // 
             // btnIn
             // 
-            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
             this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIn.Location = new System.Drawing.Point(486, 84);
+            this.btnIn.Location = new System.Drawing.Point(486, 90);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(59, 37);
+            this.btnIn.Size = new System.Drawing.Size(59, 40);
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In";
             this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,13 +132,13 @@
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.thoátToolStripMenuItem.Text = "Đăng xuất";
             // 
             // thoátToolStripMenuItem1
             // 
             this.thoátToolStripMenuItem1.Name = "thoátToolStripMenuItem1";
-            this.thoátToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.thoátToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.thoátToolStripMenuItem1.Text = "Thoát";
             // 
             // chứcNăngToolStripMenuItem
@@ -145,38 +153,30 @@
             // danhSáchGVToolStripMenuItem
             // 
             this.danhSáchGVToolStripMenuItem.Name = "danhSáchGVToolStripMenuItem";
-            this.danhSáchGVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.danhSáchGVToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.danhSáchGVToolStripMenuItem.Text = "Danh Sách GV ";
             // 
             // quảnLýCBGVToolStripMenuItem
             // 
             this.quảnLýCBGVToolStripMenuItem.Name = "quảnLýCBGVToolStripMenuItem";
-            this.quảnLýCBGVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quảnLýCBGVToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.quảnLýCBGVToolStripMenuItem.Text = "Quản Lý CBGV";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 38);
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(212, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 29);
+            this.label2.Size = new System.Drawing.Size(243, 27);
             this.label2.TabIndex = 22;
             this.label2.Text = "Danh Sách Giáo Viên";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(628, 305);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // DanhSachGiaoVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 506);
+            this.ClientSize = new System.Drawing.Size(664, 545);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnIn);
@@ -187,10 +187,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DanhSachGiaoVien";
             this.Text = "Danh Sách Giáo Viên ";
+            this.Load += new System.EventHandler(this.DanhSachGiaoVien_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

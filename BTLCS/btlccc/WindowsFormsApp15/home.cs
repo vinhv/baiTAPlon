@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15
 {
-    public partial class PhanCongGiangDay : Form
+    public partial class home : Form
     {
-        public PhanCongGiangDay()
+        public home()
         {
             InitializeComponent();
-        }
-
-        private void PhanCongGiangDay_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

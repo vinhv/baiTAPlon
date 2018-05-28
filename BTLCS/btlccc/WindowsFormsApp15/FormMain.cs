@@ -26,7 +26,7 @@ namespace WindowsFormsApp15
         
         
         QuanLyDiem qlDiem = new QuanLyDiem();
-
+        home hm = new home();
         QuanLyGiaovien qlGiaoVien = new QuanLyGiaovien();
         //HoSoHocSinh qlHocSinh = new HoSoHocSinh();
         QuanLyHocSinh qlHocSinh = new QuanLyHocSinh();
@@ -49,6 +49,7 @@ namespace WindowsFormsApp15
 
         private void btnThongKeHs_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 7;
             Them(tkHS);
             if (Application.OpenForms["ThongKeHS"] as ThongKeHS == null)
             {
@@ -63,6 +64,7 @@ namespace WindowsFormsApp15
 
         private void btnQuanLyGiaoVien_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 4;
             Them(qlGiaoVien);
             if (Application.OpenForms["QuanLyGiaovien"] as QuanLyGiaovien == null)
             {
@@ -124,13 +126,124 @@ namespace WindowsFormsApp15
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "login")
+                Application.OpenForms[i].Close();
+            }
             login a = new login();
             a.Show();
-            Close();
+          
+        }
+
+        private void phancong_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void giaovien_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void monhoc_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void lophoc_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void hocsinh_Click(object sender, EventArgs e)
+        {
+          
+           
+        }
+
+        private void tkhss_Click(object sender, EventArgs e)
+        {
+            btnThongKeHs_Click(null, null);
+        }
+
+        private void tkgvv_Click(object sender, EventArgs e)
+        {
+            btnThongKEGiaoVien_Click(null, null);
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 3)
+                btnQuanLyLopHoc_Click(null,null);
+            if (tabControl1.SelectedIndex == 1)
+                btnQuanLyHocSinh_Click(null, null);
+            if (tabControl1.SelectedIndex == 2)
+                btnQuanLyMonHoc_Click(null, null);
+            if (tabControl1.SelectedIndex == 4)
+                btnQuanLyGiaoVien_Click(null, null);
+            if (tabControl1.SelectedIndex == 5)
+                btnPhanCongGiangDay_Click(null, null);
+            if (tabControl1.SelectedIndex == 6)
+                btnThongKEGiaoVien_Click(null, null);
+            if (tabControl1.SelectedIndex == 7)
+                btnThongKeHs_Click(null, null);
+            if (tabControl1.SelectedIndex == 0)
+            {
+
+                Them(hm);
+                if (Application.OpenForms["home"] as home == null)
+                {
+                    hm.Show();
+                }
+            }
+                
+        }
+
+        private void home_Click(object sender, EventArgs e)
+        {
+            
+            Them(hm);
+            if (Application.OpenForms["home"] as home == null)
+            {
+                hm.Show();
+            }
+        }
+
+        private void tabControl1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (gv)
+            {
+                Them(hm);
+                if (Application.OpenForms["home"] as home == null)
+                {
+                    hm.Show();
+                }
+            }
+            else
+            {
+                tabControl1_SelectedIndexChanged(null, null);
+            }
+        }
+
+        private void hocsinh_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
 
         private void btnThongKEGiaoVien_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex=6;
             Them(tkGV);
             if (Application.OpenForms["ThongKeGV"] as ThongKeGV == null)
             {
@@ -218,29 +331,26 @@ namespace WindowsFormsApp15
         //Mo form quan ly diem
         private void btnQuanLyDiem_Click(object sender, EventArgs e)
         {
+           // tabControl1.SelectedIndex = 0;
             if (Application.OpenForms["QuanLyDiem"] as QuanLyDiem == null)
             {
                
-                Them(qlDiem);
+                
                
                 qlDiem.MAGV = MAGV;
                 qlDiem.Show();
                
 
             }
-            else
-            {
-                Them(qlDiem);
-
-            }
-
+            
+                Them(qlDiem);            
         }
         //tao
         
         //su kien dong
         private void Them(Form a)
         {
-            foreach (Control item in BaoFor.Controls.OfType<Form>())
+            foreach (Control item in BaoForm.Controls.OfType<Form>())
             {
 
 
@@ -289,13 +399,14 @@ namespace WindowsFormsApp15
 
             foreach (Control item in BaoFor.Controls.OfType<Form>())
                 {
-                    BaoFor.Controls.Remove(item);
+                    BaoForm.Controls.Remove(item);
                 }
             
         }
 
         private void btnQuanLyMonHoc_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 2;
             Them(qlMOnHoc);
             if (Application.OpenForms["QuanLyMonHoc"] as QuanLyMonHoc == null)
             {
@@ -305,6 +416,7 @@ namespace WindowsFormsApp15
 
         private void btnQuanLyLopHoc_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 3;
             Them(qlLOp);
             if (Application.OpenForms["QuanLyLop"] as QuanLyLop == null)
             {
@@ -314,6 +426,7 @@ namespace WindowsFormsApp15
 
         private void btnQuanLyHocSinh_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 1;
             Them(qlHocSinh);
             if (Application.OpenForms["QuanLyHocSinh"] as QuanLyHocSinh == null)
             {
@@ -326,6 +439,13 @@ namespace WindowsFormsApp15
           //  CanBoGiaoVienBLL c = new CanBoGiaoVienBLL();
            
             dos();
+            tabControl1.SelectedIndex = 0;
+           
+            Them(hm);
+            if (Application.OpenForms["home"] as home == null)
+            {
+                hm.Show();
+            }
             btnThongkeLen.FlatStyle = FlatStyle.Flat;
             btnThongkeLen.FlatAppearance.BorderSize = 0;
             btnThongkeLen.BackColor = Color.White;
@@ -350,9 +470,17 @@ namespace WindowsFormsApp15
                 btnQuanLyDanhMuc.Enabled = false;
                 btnThongKeBaoCao.Enabled = false;
                 btnPhanCongGiangDay.Enabled = false;
+                int sl = tabControl1.TabPages.Count;
+                for (int i=sl-1;i>0;i--)
+                {
+                    tabControl1.Controls.Remove(tabControl1.TabPages[i]);
+                   // sl--;
+                }
             }
             if (ad)
+            {
                 btnQuanLyDiem.Enabled = false;
+            }
         }
 
         private void TabGG_Paint(object sender, PaintEventArgs e)
@@ -457,20 +585,11 @@ namespace WindowsFormsApp15
         //phancong
         private void btnPhanCongGiangDay_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 5;
             if (Application.OpenForms["PhanCongGD"] as PhanCongGD == null)
-            {
-               
-                Them(qlgd);
-                qlgd.Show();
-               
 
-            }
-            else
-            {
-                
-                Them(qlgd);
-                
-            }
+                qlgd.Show();
+            Them(qlgd);
 
         }
 

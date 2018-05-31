@@ -30,7 +30,7 @@ namespace WindowsFormsApp15
 
         private void button2_Click(object sender, EventArgs e)
         {
-           DialogResult r= MessageBox.Show("ban thuc su muốn thoát ??", "???", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+           DialogResult r= MessageBox.Show("Bạn thực sự muốn thoát ??", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (r == DialogResult.Yes)
 
             {

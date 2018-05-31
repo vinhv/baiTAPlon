@@ -22,18 +22,18 @@ namespace WindowsFormsApp15
         public bool ad = false;
         public string TenUsers { get; set; }
         public string MaGV { get; set; }
-        
-        
-        
+
+        frmHoSoHocSinh qlHocSinh = new frmHoSoHocSinh();
+        frmQLDMGiaoVien qlGV = new frmQLDMGiaoVien();
         QuanLyDiem qlDiem = new QuanLyDiem();
         home hm = new home();
-        QuanLyGiaovien qlGiaoVien = new QuanLyGiaovien();
-        //HoSoHocSinh qlHocSinh = new HoSoHocSinh();
-        QuanLyHocSinh qlHocSinh = new QuanLyHocSinh();
+        //QuanLyGiaovien qlGiaoVien = new QuanLyGiaovien();
+        //QuanLyHocSinh qlHocSinh = new QuanLyHocSinh();
         PhanCongGD qlgd = new PhanCongGD();
         QuanLyLop qlLOp = new QuanLyLop();
 
-        ThongKeGV tkGV = new ThongKeGV();
+        DanhSachGiaoVien tkGV = new DanhSachGiaoVien();
+        //ThongKeGV tkGV = new ThongKeGV();
         ThongKeHS tkHS = new ThongKeHS();
         QuanLyMonHoc qlMOnHoc = new QuanLyMonHoc();
         PhanCongGiangDay Phan = new PhanCongGiangDay();
@@ -65,10 +65,10 @@ namespace WindowsFormsApp15
         private void btnQuanLyGiaoVien_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
-            Them(qlGiaoVien);
-            if (Application.OpenForms["QuanLyGiaovien"] as QuanLyGiaovien == null)
+            Them(qlGV);
+            if (Application.OpenForms["frmQLDMGiaoVien"] as frmQLDMGiaoVien == null)
             {
-                qlGiaoVien.Show();
+                qlGV.Show();
             }
         }
 
@@ -250,7 +250,7 @@ namespace WindowsFormsApp15
         {
             tabControl1.SelectedIndex=6;
             Them(tkGV);
-            if (Application.OpenForms["ThongKeGV"] as ThongKeGV == null)
+            if (Application.OpenForms["DanhSachGiaoVien"] as DanhSachGiaoVien == null)
             {
                 tkGV.Show();
             }
@@ -433,7 +433,7 @@ namespace WindowsFormsApp15
         {
             tabControl1.SelectedIndex = 1;
             Them(qlHocSinh);
-            if (Application.OpenForms["QuanLyHocSinh"] as QuanLyHocSinh == null)
+            if (Application.OpenForms["frmHoSoHocSinh"] as frmHoSoHocSinh == null)
             {
                 qlHocSinh.Show();
             }

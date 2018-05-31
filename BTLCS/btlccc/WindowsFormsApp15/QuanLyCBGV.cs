@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DTO;
 
 namespace WindowsFormsApp15
 {
@@ -16,10 +18,11 @@ namespace WindowsFormsApp15
         {
             InitializeComponent();
         }
-
+        
         private void frmQLDMGiaoVien_Load(object sender, EventArgs e)
         {
-
+            QuanLyCBGVBUL cls = new QuanLyCBGVBUL();
+            dgvCBGV.DataSource = cls.HienThiDS();
         }
     }
 }

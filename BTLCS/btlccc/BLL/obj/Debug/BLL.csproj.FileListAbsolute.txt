@@ -57,3 +57,12 @@ D:\Git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\normnfkd.nlp
 D:\Git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.dll
 D:\Git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.pdb
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\BLL.dll
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\BLL.pdb
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DAL.dll
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DTO.dll
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DAL.pdb
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DTO.pdb
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.dll
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.pdb

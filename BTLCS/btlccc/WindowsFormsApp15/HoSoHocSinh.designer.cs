@@ -73,6 +73,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -101,6 +102,7 @@
             this.btnXoa.Text = "Xoá";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnXem
             // 

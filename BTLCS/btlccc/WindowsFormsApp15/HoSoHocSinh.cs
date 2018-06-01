@@ -48,5 +48,31 @@ namespace WindowsFormsApp15
             cboGioiTinh.DisplayMember = "ten";
             cboGioiTinh.ValueMember = "gioitinh";
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            HoSoHSBUL cls = new HoSoHSBUL();
+            HoSoHocSinh x = new HoSoHocSinh();
+            x.MaHocSinh = txtMaHS.Text;
+            cls.Xoa(x);
+            frmHoSoHocSinh_Load(sender, e);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            HoSoHSBUL cls = new HoSoHSBUL();
+            HoSoHocSinh x = new HoSoHocSinh();
+            x.MaHocSinh = txtMaHS.Text;
+            x.HoTen = txtHoTen.Text;
+            x.NgaySinh = DateTime.Parse(txtNgaySinh.Text);
+            x.GioiTinh = cboGioiTinh.SelectedValue.ToString();
+            x.DiaChi = txtDiaChi.Text;
+            x.DiemVAotruong = double.Parse(txtDiemVaoTruong.Text);
+            x.HoTenBoMe = txtHoTenBoMe.Text;
+            x.sdt = txtSDT.Text;
+            x.MaLop = cboMaLop.SelectedValue.ToString();
+            cls.Them(x);
+            frmHoSoHocSinh_Load(sender, e);
+        }
     }
 }

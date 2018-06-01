@@ -20,5 +20,13 @@ namespace BLL
         {
             return cls.LayMaLop();
         }
+        public int Xoa(HoSoHocSinh x)
+        {
+            return cls.Xoa(x);
+        }
+        public int Them(HoSoHocSinh x)
+        {
+            return cls.Them(x);
+        }
     }
 }

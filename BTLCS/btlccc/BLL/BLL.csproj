@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CanBoGiaoVienBLL.cs" />
     <Compile Include="GiangDayPCDABLL.cs" />
+    <Compile Include="HoSoHSBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyCBGVBUL.cs" />
     <Compile Include="QuanLyDiemBLL.cs" />

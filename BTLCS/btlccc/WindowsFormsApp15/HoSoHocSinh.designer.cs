@@ -34,30 +34,29 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnXem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHocSinh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.cboMaLop = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txtHoTenBoMe = new System.Windows.Forms.TextBox();
+            this.txtDiemVaoTruong = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtMaCBGV = new System.Windows.Forms.TextBox();
+            this.txtMaHS = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,39 +123,38 @@
             this.groupBox2.Controls.Add(this.btnSua);
             this.groupBox2.Controls.Add(this.btnXoa);
             this.groupBox2.Controls.Add(this.btnXem);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgvHocSinh);
             this.groupBox2.Location = new System.Drawing.Point(12, 254);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(640, 298);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             // 
-            // dataGridView1
+            // dgvHocSinh
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(628, 176);
-            this.dataGridView1.TabIndex = 22;
+            this.dgvHocSinh.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHocSinh.Location = new System.Drawing.Point(6, 116);
+            this.dgvHocSinh.Name = "dgvHocSinh";
+            this.dgvHocSinh.Size = new System.Drawing.Size(628, 176);
+            this.dgvHocSinh.TabIndex = 22;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.cboGioiTinh);
+            this.groupBox1.Controls.Add(this.cboMaLop);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtHoTen);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.txtMatKhau);
-            this.groupBox1.Controls.Add(this.txtTaiKhoan);
+            this.groupBox1.Controls.Add(this.txtHoTenBoMe);
+            this.groupBox1.Controls.Add(this.txtDiemVaoTruong);
+            this.groupBox1.Controls.Add(this.txtNgaySinh);
             this.groupBox1.Controls.Add(this.txtSDT);
-            this.groupBox1.Controls.Add(this.txtMaCBGV);
+            this.groupBox1.Controls.Add(this.txtMaHS);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label3);
@@ -169,38 +167,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Học Sinh";
             // 
-            // comboBox1
+            // cboMaLop
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 138);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(204, 112);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(113, 112);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.cboMaLop.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboMaLop.FormattingEnabled = true;
+            this.cboMaLop.Location = new System.Drawing.Point(97, 138);
+            this.cboMaLop.Name = "cboMaLop";
+            this.cboMaLop.Size = new System.Drawing.Size(121, 21);
+            this.cboMaLop.TabIndex = 5;
             // 
             // label7
             // 
@@ -259,29 +233,29 @@
             this.txtHoTen.Size = new System.Drawing.Size(191, 20);
             this.txtHoTen.TabIndex = 2;
             // 
-            // textBox1
+            // txtHoTenBoMe
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(429, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtHoTenBoMe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtHoTenBoMe.Location = new System.Drawing.Point(429, 107);
+            this.txtHoTenBoMe.Name = "txtHoTenBoMe";
+            this.txtHoTenBoMe.Size = new System.Drawing.Size(166, 20);
+            this.txtHoTenBoMe.TabIndex = 2;
             // 
-            // txtMatKhau
+            // txtDiemVaoTruong
             // 
-            this.txtMatKhau.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMatKhau.Location = new System.Drawing.Point(429, 75);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(166, 20);
-            this.txtMatKhau.TabIndex = 2;
+            this.txtDiemVaoTruong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDiemVaoTruong.Location = new System.Drawing.Point(429, 75);
+            this.txtDiemVaoTruong.Name = "txtDiemVaoTruong";
+            this.txtDiemVaoTruong.Size = new System.Drawing.Size(166, 20);
+            this.txtDiemVaoTruong.TabIndex = 2;
             // 
-            // txtTaiKhoan
+            // txtNgaySinh
             // 
-            this.txtTaiKhoan.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTaiKhoan.Location = new System.Drawing.Point(429, 45);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(166, 20);
-            this.txtTaiKhoan.TabIndex = 2;
+            this.txtNgaySinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNgaySinh.Location = new System.Drawing.Point(429, 45);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(166, 20);
+            this.txtNgaySinh.TabIndex = 2;
             // 
             // txtSDT
             // 
@@ -291,14 +265,14 @@
             this.txtSDT.Size = new System.Drawing.Size(166, 20);
             this.txtSDT.TabIndex = 2;
             // 
-            // txtMaCBGV
+            // txtMaHS
             // 
-            this.txtMaCBGV.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMaCBGV.Location = new System.Drawing.Point(95, 19);
-            this.txtMaCBGV.Name = "txtMaCBGV";
-            this.txtMaCBGV.Size = new System.Drawing.Size(191, 20);
-            this.txtMaCBGV.TabIndex = 2;
-            this.txtMaCBGV.TextChanged += new System.EventHandler(this.txtMaCBGV_TextChanged);
+            this.txtMaHS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMaHS.Location = new System.Drawing.Point(95, 19);
+            this.txtMaHS.Name = "txtMaHS";
+            this.txtMaHS.Size = new System.Drawing.Size(191, 20);
+            this.txtMaHS.TabIndex = 2;
+            this.txtMaHS.TextChanged += new System.EventHandler(this.txtMaCBGV_TextChanged);
             // 
             // label8
             // 
@@ -361,6 +335,15 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Hồ Sơ Học Sinh";
             // 
+            // cboGioiTinh
+            // 
+            this.cboGioiTinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboGioiTinh.FormattingEnabled = true;
+            this.cboGioiTinh.Location = new System.Drawing.Point(97, 107);
+            this.cboGioiTinh.Name = "cboGioiTinh";
+            this.cboGioiTinh.Size = new System.Drawing.Size(121, 21);
+            this.cboGioiTinh.TabIndex = 5;
+            // 
             // frmHoSoHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,8 +355,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHoSoHocSinh";
             this.Text = "Hồ sơ học sinh";
+            this.Load += new System.EventHandler(this.frmHoSoHocSinh_Load);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -388,7 +372,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHocSinh;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -396,20 +380,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.TextBox txtTaiKhoan;
+        private System.Windows.Forms.TextBox txtDiemVaoTruong;
+        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtMaCBGV;
+        private System.Windows.Forms.ComboBox cboMaLop;
+        private System.Windows.Forms.TextBox txtHoTenBoMe;
+        private System.Windows.Forms.TextBox txtMaHS;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cboGioiTinh;
 
     }
 }

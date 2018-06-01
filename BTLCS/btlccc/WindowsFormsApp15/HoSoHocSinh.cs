@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DTO;
 
 namespace WindowsFormsApp15
 {
@@ -25,6 +27,26 @@ namespace WindowsFormsApp15
         private void quảnLýHồSơHSToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmHoSoHocSinh_Load(object sender, EventArgs e)
+        {
+            HoSoHSBUL cls = new HoSoHSBUL();
+            dgvHocSinh.DataSource = cls.HienThiDS();
+            dgvHocSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            cboMaLop.DataSource = cls.LayMaLop();
+            cboMaLop.DisplayMember = "TenLop";
+            cboMaLop.ValueMember = "MaLop";
+            DataTable dta = new DataTable();
+            dta.Columns.Add("gioitinh", typeof(string));
+            dta.Columns.Add("ten", typeof(string));
+
+            dta.Rows.Add("Nam", "Nam");
+            dta.Rows.Add("Nu", "Nữ");
+            cboGioiTinh.DataSource = dta;
+            cboGioiTinh.DisplayMember = "ten";
+            cboGioiTinh.ValueMember = "gioitinh";
         }
     }
 }

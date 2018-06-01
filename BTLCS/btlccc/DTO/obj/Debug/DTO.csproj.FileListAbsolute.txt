@@ -15,9 +15,17 @@ D:\Git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normnfkd.nlp
 D:\Git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 D:\Git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
 D:\Git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb
+<<<<<<< HEAD
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.dll
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.pdb
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
 C:\Users\Vinhl\Documents\GitHub\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb
+=======
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.dll
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.pdb
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
+C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb
+>>>>>>> fc4849c9059f34cb34c0a0f3ccc31df67ba75703

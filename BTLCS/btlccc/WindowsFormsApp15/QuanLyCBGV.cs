@@ -84,6 +84,11 @@ namespace WindowsFormsApp15
             frmQLDMGiaoVien_Load(sender, e);
         }
 
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            frmQLDMGiaoVien_Load(sender, e);
+        }
+
 
     }
 }

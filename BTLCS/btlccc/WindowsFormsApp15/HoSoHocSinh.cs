@@ -74,5 +74,36 @@ namespace WindowsFormsApp15
             cls.Them(x);
             frmHoSoHocSinh_Load(sender, e);
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            HoSoHSBUL cls = new HoSoHSBUL();
+            HoSoHocSinh x = new HoSoHocSinh();
+            x.MaHocSinh = txtMaHS.Text;
+            x.HoTen = txtHoTen.Text;
+            x.NgaySinh = DateTime.Parse(txtNgaySinh.Text);
+            x.GioiTinh = cboGioiTinh.SelectedValue.ToString();
+            x.DiaChi = txtDiaChi.Text;
+            x.DiemVAotruong = double.Parse(txtDiemVaoTruong.Text);
+            x.HoTenBoMe = txtHoTenBoMe.Text;
+            x.sdt = txtSDT.Text;
+            x.MaLop = cboMaLop.SelectedValue.ToString();
+            cls.Sua(x);
+            frmHoSoHocSinh_Load(sender, e);
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            frmHoSoHocSinh_Load(sender, e);
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            HoSoHSBUL cls = new HoSoHSBUL();
+            HoSoHocSinh x = new HoSoHocSinh();
+            x.MaHocSinh = txtMaHS.Text;
+            dgvHocSinh.DataSource = cls.Xem(x);
+        }
+
     }
 }

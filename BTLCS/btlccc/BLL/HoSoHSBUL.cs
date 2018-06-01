@@ -28,5 +28,13 @@ namespace BLL
         {
             return cls.Them(x);
         }
+        public int Sua(HoSoHocSinh x)
+        {
+            return cls.Sua(x);
+        }
+        public DataTable Xem(HoSoHocSinh x)
+        {
+            return cls.Xem(x);
+        }
     }
 }

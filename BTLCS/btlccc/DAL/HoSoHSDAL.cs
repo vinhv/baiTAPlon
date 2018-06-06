@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class HoSoHSDAL:QuanLyCBGVDAL
+    public class HoSoHSDAL:KetNoi
     {
         QuanLyCBGVDAL cls = new QuanLyCBGVDAL();
         public DataTable HienThiDS()

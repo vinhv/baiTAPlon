@@ -18,16 +18,7 @@ namespace WindowsFormsApp15
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
            DialogResult r= MessageBox.Show("Bạn thực sự muốn thoát ??", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
@@ -43,26 +34,21 @@ namespace WindowsFormsApp15
             else
                 return;
         }
-        List<string> tk = new List<string>();
-        List<string> mk = new List<string>();
+        private string LoaiTaiKhoan = "";
         private bool chk()
         {
+          
             CanBoGiaoVienBLL cb = new CanBoGiaoVienBLL();
             foreach (CanBoGiaoVien item in cb.dscb())
             {
-                string TK = item.Taikhoan;
-                string MK = item.MatKHau;
-                tk.Add(TK);
-                mk.Add(MK);
-            }
-           for(int i=0;i<tk.Count;i++)
-            {
-                if (tk[i] == txtuser.Text && mk[i] == txtpass.Text)
-                
+               
+                if (item.Taikhoan == txtuser.Text && item.MatKHau == txtpass.Text)
+                {
+                    LoaiTaiKhoan = item.LoaiTaiKhoan;
                     return true;
-                    
-                
+                }
             }
+          
             return false;
         }
         private void button1_Click(object sender, EventArgs e)
@@ -72,7 +58,7 @@ namespace WindowsFormsApp15
             {
                 FormMain frm = new FormMain();
 
-                if (txtpass.Text == "admin" && txtuser.Text == "admin")
+                if (LoaiTaiKhoan =="admin")
                 {
                     frm.ad = true;
                 }

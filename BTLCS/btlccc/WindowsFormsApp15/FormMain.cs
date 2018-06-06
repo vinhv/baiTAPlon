@@ -28,6 +28,7 @@ namespace WindowsFormsApp15
             Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
             ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
             rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption);
+            
             e.Graphics.FillRectangle(Brushes.DarkBlue, rc);
         }
 
@@ -71,14 +72,7 @@ namespace WindowsFormsApp15
         QuanLyMonHoc qlMOnHoc = new QuanLyMonHoc();
         PhanCongGiangDay Phan = new PhanCongGiangDay();
         private bool chkqlDiem = false;
-        private Button disQuanLyDiem = null, clsQuanLyDiem = null,
-                                disPhanCong = null, clsPhanCong = null,
-                                 disLopHoc = null, clsLopHoc = null,
-                                     disGiaoVien = null, clsGiaovien = null,
-             disMonHoc = null, clsMonHoc = null,
-             disTkgiaovien = null, clsTkgiaovien = null,
-             disTkHocSinh = null, clsTkHocSinh = null,
-             disHocsinh = null, clsHocSinh = null;
+        
 
         private void btnThongKeHs_Click(object sender, EventArgs e)
         {
@@ -88,11 +82,6 @@ namespace WindowsFormsApp15
             {
                 tkHS.Show();
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnQuanLyGiaoVien_Click(object sender, EventArgs e)
@@ -105,11 +94,7 @@ namespace WindowsFormsApp15
             }
         }
 
-        //panel
-        private Panel pnDiem = null, pnLop = null, pnHOCsinh = null, pnTKHocsinh = null, pnTKGIaovien = null,
-            pnPhancong = null,
-        pnMonHoc = null, pnGiaoVien = null;
-
+   
         private void mini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -146,17 +131,7 @@ namespace WindowsFormsApp15
             }
         }
 
-        private void doDucVinhToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void A_FormClosed(object sender, FormClosedEventArgs e)
-        {
-          
-
-        }
-
+   
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
@@ -169,31 +144,6 @@ namespace WindowsFormsApp15
           
         }
 
-        private void phancong_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void giaovien_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void monhoc_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void lophoc_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void hocsinh_Click(object sender, EventArgs e)
-        {
-          
-           
-        }
 
         private void tkhss_Click(object sender, EventArgs e)
         {
@@ -205,15 +155,6 @@ namespace WindowsFormsApp15
             btnThongKEGiaoVien_Click(null, null);
         }
 
-        private void tabControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
@@ -265,18 +206,8 @@ namespace WindowsFormsApp15
             }
             else
             {
-                tabControl1_SelectedIndexChanged(null, null);
+               // tabControl1_SelectedIndexChanged(null, null);
             }
-        }
-
-        private void hocsinh_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void BaoForm_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnThongKEGiaoVien_Click(object sender, EventArgs e)
@@ -405,42 +336,7 @@ namespace WindowsFormsApp15
             BaoForm.Controls.Add(a);
             a.Dock = DockStyle.Fill;
         }
-        private void ClsQuanLyDiem_Click(object sender, EventArgs e)
-        {
-            if (pnDiem != null)
-            {
-                foreach (Control i in TabGG.Controls.OfType<Panel>())
-                    if (i == pnDiem)
-                    {
-                        
-                        TabGG.Controls.Remove(i);
-                        pnDiem = null;
-                        disQuanLyDiem = null;
-                        clsQuanLyDiem = null;
-
-                        break;
-                    }
-            }
-
-
-
-            foreach (Form item in this.MdiChildren)
-            {
-                
-            }
-               // frm.Close();
-            //frm.Visible = false;
-           // Application.Exit(QuanLyDiem);
-
-
-
-
-            foreach (Control item in BaoFor.Controls.OfType<Form>())
-                {
-                    BaoForm.Controls.Remove(item);
-                }
-            
-        }
+       
 
         private void btnQuanLyMonHoc_Click(object sender, EventArgs e)
         {
@@ -520,12 +416,6 @@ namespace WindowsFormsApp15
                 btnQuanLyDiem.Enabled = false;
             }
         }
-
-        private void TabGG_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
         
         private bool checkE(string name)
         {
@@ -541,84 +431,22 @@ namespace WindowsFormsApp15
             return check;
         }
         //Mo form Phan Cong giang day
-        //tao
-        private void Taodis(out Button na)
-        {
-            na = new Button();
-            na.Width = 70;
-            na.Height = 30;
-            na.FlatStyle = FlatStyle.Flat;
-            na.FlatAppearance.BorderSize = 0;
-            if (na == disGiaoVien)
-            {
-                na.Text = "GiaoVien";
-            }
-            if (na == disLopHoc)
-            {
-                na.Text = "LopHoc";
-            }
-            if (na == disMonHoc)
-            {
-                na.Text = "MonHoc";
-            }
-            if (na == disPhanCong)
-            {
-                na.Text = "PhanCong";
-            }
-            if (na == disQuanLyDiem)
-            {
-                na.Text = "Diem";
-            }
-            if (na == disHocsinh)
-            {
-                na.Text = "HOcSinh";
-            }
-            if (na == disTkgiaovien)
-            {
-                na.Text = "TKGiaoVien";
-            }
-            if (na == disTkHocSinh)
-            {
-                na.Text = "tkHS";
-            }
-        }
-        //cls
-        private void Taocls(out Button  na)
-        {
-            na = new Button();
-            na.Width = 30;
-            na.Height = 30;
-            na.FlatStyle = FlatStyle.Flat;
-            na.FlatAppearance.BorderSize = 0;
-            na.ForeColor = Color.Red;
-            na.Text = "X";
-        }
-        //code bo di
-        private void Taopn(out Panel pn)
-        {
-            pn = new Panel();
-            pn.BorderStyle = BorderStyle.None;
-            pn.BackColor = Color.White;
-            pn.Width = 100;
-            pn.Height = 30;
-        }
+  
         //lay ma gv
         string MAGV;
-        private void dos (){
+        private void dos ()
+        {
             CanBoGiaoVienBLL cb = new CanBoGiaoVienBLL();
             foreach (CanBoGiaoVien item in cb.dscb())
             {
                 if (item.Taikhoan == TenUsers)
                 {
-                    doDucVinhToolStripMenuItem.Text = item.HoTen;
-                    //QuanLyDiem f = new QuanLyDiem();
+                   doDucVinhToolStripMenuItem.Text = item.HoTen;               
                     MAGV = item.MaCanBo;
                     break;
                 }
             }
-                  
-                
-            
+                                              
         }
         //phancong
         private void btnPhanCongGiangDay_Click(object sender, EventArgs e)
@@ -631,14 +459,26 @@ namespace WindowsFormsApp15
 
         }
 
-        private void btnQuanLyDanhMuc_Click(object sender, EventArgs e)
+        private void minimizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnThongKeBaoCao_Click(object sender, EventArgs e)
+        private void maxnimizeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Maximized;
+            max.Visible = true;
+            moo.Visible = false;
+        }
 
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                //if (Application.OpenForms[i].Name != "Menu")
+                Application.OpenForms[i].Close();
+            }
         }
     }
 }

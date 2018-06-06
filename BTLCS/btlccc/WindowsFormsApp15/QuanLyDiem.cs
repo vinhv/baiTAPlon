@@ -41,6 +41,7 @@ namespace WindowsFormsApp15
         private bool LuubtnThem = false, LuutoolThem = false, LuubtnSua = false, LuutoolSua = false, LuubtnMoi = false, LuutoolMoi = false;
 
         #endregion
+        #region Tim cac Lop Va Mon hoc Giao vien day
         private void TIMGV()
         {
             foreach (var item in ql.dsPhanCong())
@@ -106,21 +107,22 @@ namespace WindowsFormsApp15
             cbTenMon.DataSource = tenMon;
 
         }
+        #endregion
         //thay doi font tim 
-
         private void ThayFont()
         {
             txtTim.Text = "Mã môn + Tên môn trong combobox :)) or Mã Hoc Sinh";
             txtTim.ForeColor = Color.Gray;
         }
         //tao ra combo diem
-        List<string> LoaiDiem = new List<string>() { "Điểm 2 kỳ", "Điểm Kỳ 1", "Điểm Kỳ 2" };
+        
         List<string> hhhh = new List<string>() { "Tìm điểm", "Tìm hồ sơ" };
-        homeDiem aa = new homeDiem();
-
+        homeDiem aa = new homeDiem(); // form thong tin
+        //form load
         private void QuanLyDiem_Load(object sender, EventArgs e)
         {
-           
+            toolSave.FlatStyle = FlatStyle.Flat;
+            toolSave.FlatAppearance.BorderSize = 0;
             aa.magv = MAGV;
             //my home
 
@@ -131,7 +133,7 @@ namespace WindowsFormsApp15
             aa.TopLevel = false;
             aa.AutoScroll = true;
             aa.FormBorderStyle = FormBorderStyle.None;
-            CH("aa");
+            ThemFormThongTin();
             //aa.MdiParent = this;
 
 
@@ -297,11 +299,7 @@ namespace WindowsFormsApp15
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
 
         //hien thi
         private string MamonLay = "";
@@ -358,7 +356,7 @@ namespace WindowsFormsApp15
                     btnTHemACTIVE = false;
 
                     if (dataGridView1.Visible == false)
-                        CH("dataGridView1");
+                        CH(dataGridView1);
                     int k = 0;
                     if (cbTenMon.SelectedIndex != -1)
                     {
@@ -402,7 +400,7 @@ namespace WindowsFormsApp15
                     btnTHemACTIVE = false;
 
                     if (dataGridView4.Visible == false)
-                        CH("dataGridView4");
+                        CH(dataGridView4);
                     int k = 0;
                     if (cbTenMon.SelectedIndex != -1)
                     {
@@ -444,7 +442,7 @@ namespace WindowsFormsApp15
                         btnTHemACTIVE = false;
 
                         if (dataGridView1.Visible == false)
-                            CH("dataGridView1");
+                            CH(dataGridView1);
                         int k = 0;
                         if (cbTenMon.SelectedIndex != -1)
                         {
@@ -665,7 +663,7 @@ namespace WindowsFormsApp15
             LuubtnThem = true;
 
             if (dataGridView1.Visible == false)
-                CH("dataGridView1");
+                CH(dataGridView1);
             int k = 0;
             if (cbTenMon.SelectedIndex != -1)
             {
@@ -738,6 +736,11 @@ namespace WindowsFormsApp15
                 {
                     dataGridView1.Refresh();
                     MessageBox.Show("Thêm thành công", "success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MaHocSinhsuadiem1.Clear();
+                    MaHocSinhsuadiem2.Clear();
+                    dongSua1.Clear();
+                    dongSua2.Clear();
+                    button2_Click(null, null);
                     toolStripProgressBar1.Visible = true;
                     try
                     {
@@ -745,7 +748,8 @@ namespace WindowsFormsApp15
                     }
                     catch (Exception ex)
                     { }
-                    button2_Click(null, null);
+                    
+
                     //  btnLuu.Enabled = false;
 
                 }
@@ -853,86 +857,35 @@ namespace WindowsFormsApp15
 
         }
         //hien thi data2
-        private void CH(string Name)
+        private void ThemFormThongTin()
         {
-            if (Name == "dataGridView2")
+            foreach (Control item in pnDiem.Controls.OfType<DataGridView>())
             {
-                dataGridView4.Dock = DockStyle.None;
-                dataGridView4.Visible = false;
-                dataGridView1.Dock = DockStyle.None;
-                dataGridView1.Visible = false;
-                dataGridView3.Dock = DockStyle.None;
-                dataGridView3.Visible = false;
-                aa.Dock = DockStyle.None;
-                aa.Visible = false;
-                pnDiem.Controls.Remove(aa);
-                dataGridView2.Visible = true;
-                dataGridView2.Dock = DockStyle.Fill;
+                item.Dock = DockStyle.None;
+                item.Visible = false;               
             }
-            if (Name == "dataGridView1")
-            {
-                aa.Dock = DockStyle.None;
-                aa.Visible = false;
-                dataGridView4.Dock = DockStyle.None;
-                dataGridView4.Visible = false;
-                dataGridView3.Dock = DockStyle.None;
-                dataGridView3.Visible = false;
-                dataGridView2.Dock = DockStyle.None;
-                dataGridView2.Visible = false;
-                pnDiem.Controls.Remove(aa);
-                dataGridView1.Visible = true;
-                dataGridView1.Dock = DockStyle.Fill;
-            }
-            if (Name == "dataGridView3")
-            {
-                aa.Dock = DockStyle.None;
-                aa.Visible = false;
-                dataGridView4.Dock = DockStyle.None;
-                dataGridView4.Visible = false;
-                dataGridView1.Dock = DockStyle.None;
-                dataGridView1.Visible = false;
-                dataGridView2.Dock = DockStyle.None;
-                dataGridView2.Visible = false;
-                pnDiem.Controls.Remove(aa);
-                dataGridView3.Visible = true;
-                dataGridView3.Dock = DockStyle.Fill;
-            }
-            if (Name == "dataGridView4")
-            {
-                aa.Dock = DockStyle.None;
-                aa.Visible = false;
-
-                dataGridView1.Dock = DockStyle.None;
-                dataGridView1.Visible = false;
-                dataGridView2.Dock = DockStyle.None;
-                dataGridView2.Visible = false;
-
-                dataGridView3.Visible = false;
-                dataGridView3.Dock = DockStyle.None;
-                pnDiem.Controls.Remove(aa);
-                dataGridView4.Visible = true;
-                dataGridView4.Dock = DockStyle.Fill;
-            }
-            if (Name == "aa")
-            {
-
-                dataGridView1.Dock = DockStyle.None;
-                dataGridView1.Visible = false;
-                dataGridView2.Dock = DockStyle.None;
-                dataGridView2.Visible = false;
-
-                dataGridView3.Visible = false;
-                dataGridView3.Dock = DockStyle.None;
-
-                dataGridView4.Visible = false;
-                dataGridView4.Dock = DockStyle.None;
-                pnDiem.Controls.Add(aa);
-                aa.Dock = DockStyle.Fill;
-                aa.Visible = true;
-
-            }
+            pnDiem.Controls.Add(aa);
+            aa.Dock = DockStyle.Fill;
         }
-        //khong ht data2
+        private void LoaiBoFormThongTin()
+        {
+            aa.Dock = DockStyle.None;
+            pnDiem.Controls.Remove(aa);
+        }
+        private void CH(DataGridView Name)
+        {
+            foreach (Control item in pnDiem.Controls.OfType<DataGridView>())
+            {
+                item.Dock = DockStyle.None;
+                item.Visible = false;
+            }
+            LoaiBoFormThongTin();
+           
+            Name.Visible = true;
+            Name.Dock = DockStyle.Fill;
+           
+        }
+       
 
         private void Hienthidata2()
         {
@@ -1062,7 +1015,7 @@ namespace WindowsFormsApp15
             if (btnTHemACTIVE)
                 CheckbtnTHEM();
             if (dataGridView2.Visible == false)
-                CH("dataGridView2");
+                CH(dataGridView2);
             dataGridView2.Rows.Clear();
             dataGridView2.Refresh();
             Hienthidata2();
@@ -1100,7 +1053,9 @@ namespace WindowsFormsApp15
         //goi su kien button luu click
         private void saveToolStripButton_Click_1(object sender, EventArgs e)
         {
-            button4_Click(null, null);
+            Refresh();
+            button4_Click(null,null);
+
         }
         //tro ve font cu
         private void TroveFont()
@@ -1183,7 +1138,7 @@ namespace WindowsFormsApp15
 
         private void toolMoi_Click(object sender, EventArgs e)
         {
-            CH("aa");
+            ThemFormThongTin();
             Refresh();
         }
 
@@ -1230,15 +1185,7 @@ namespace WindowsFormsApp15
             }
         }
 
-        private void txtTim_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void combodiem_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
@@ -1250,10 +1197,7 @@ namespace WindowsFormsApp15
             ThayFont();
         }
 
-        private void txtTim_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
+     
 
         private void txtTim_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1263,16 +1207,13 @@ namespace WindowsFormsApp15
         //goi sukien button them click
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            button2_Click(null, null);
-        }
-
-        private void button1_Click_3(object sender, EventArgs e)
-        {
-           
+            button2_Click(null,null);
         }
 
 
-     
+
+
+
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
             DialogResult d = MessageBox.Show("Cập nhật dữ liệu sẽ mất một khoảng thời gian \nBạn có thực sự muốn cập nhật không ?",
@@ -1318,18 +1259,34 @@ namespace WindowsFormsApp15
             //toolStripProgressBar1.Visible = false;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button4_Click(null, null);
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            button4_Click(null, null);
+        }
+
+        private void toolStripButton6_Click_1(object sender, EventArgs e)
+        {
+
+            System.Diagnostics.Process.Start
+                ("https://www.google.com.vn/search?q=%3F&rlz=1C1PRFI_enVN" +
+                "767VN767&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiAqYDX" +
+                "jaPbAhWKWLwKHUM2DTEQ_AUICigB&biw=1517&bih=664");
+        }
+
 
 
         //goi su kien button sua click
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            button3_Click(null, null);
+            button3_Click(null,null);
         }
 
-        private void button1_Click_4(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void helpToolStripButton_Click_1(object sender, EventArgs e)
         {
@@ -1351,12 +1308,7 @@ namespace WindowsFormsApp15
 
             }
         }
-        private void btnMoi_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
+      
 
         //tu dong insert
         private bool km = true;

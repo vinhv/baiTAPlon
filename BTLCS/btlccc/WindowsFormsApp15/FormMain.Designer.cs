@@ -47,9 +47,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.mini = new System.Windows.Forms.Button();
-            this.moo = new System.Windows.Forms.Button();
-            this.max = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.doDucVinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +56,9 @@
             this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.mini = new System.Windows.Forms.Button();
+            this.moo = new System.Windows.Forms.Button();
+            this.max = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -191,7 +191,7 @@
             this.hocsinh.Location = new System.Drawing.Point(4, 41);
             this.hocsinh.Name = "hocsinh";
             this.hocsinh.Padding = new System.Windows.Forms.Padding(3);
-            this.hocsinh.Size = new System.Drawing.Size(122, 0);
+            this.hocsinh.Size = new System.Drawing.Size(0, 0);
             this.hocsinh.TabIndex = 1;
             this.hocsinh.Text = "Học Sinh";
             // 
@@ -200,7 +200,7 @@
             this.monhoc.Location = new System.Drawing.Point(4, 41);
             this.monhoc.Name = "monhoc";
             this.monhoc.Padding = new System.Windows.Forms.Padding(3);
-            this.monhoc.Size = new System.Drawing.Size(122, 0);
+            this.monhoc.Size = new System.Drawing.Size(0, 0);
             this.monhoc.TabIndex = 2;
             this.monhoc.Text = "Môn Học";
             this.monhoc.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.lophoc.Location = new System.Drawing.Point(4, 41);
             this.lophoc.Name = "lophoc";
             this.lophoc.Padding = new System.Windows.Forms.Padding(3);
-            this.lophoc.Size = new System.Drawing.Size(122, 0);
+            this.lophoc.Size = new System.Drawing.Size(0, 0);
             this.lophoc.TabIndex = 3;
             this.lophoc.Text = "Lớp Học";
             this.lophoc.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
             this.giaovien.Location = new System.Drawing.Point(4, 41);
             this.giaovien.Name = "giaovien";
             this.giaovien.Padding = new System.Windows.Forms.Padding(3);
-            this.giaovien.Size = new System.Drawing.Size(122, 0);
+            this.giaovien.Size = new System.Drawing.Size(0, 0);
             this.giaovien.TabIndex = 4;
             this.giaovien.Text = "Giáo Viên";
             this.giaovien.UseVisualStyleBackColor = true;
@@ -230,7 +230,7 @@
             // 
             this.phancong.Location = new System.Drawing.Point(4, 41);
             this.phancong.Name = "phancong";
-            this.phancong.Size = new System.Drawing.Size(122, 0);
+            this.phancong.Size = new System.Drawing.Size(0, 0);
             this.phancong.TabIndex = 5;
             this.phancong.Text = "Phân Công";
             this.phancong.UseVisualStyleBackColor = true;
@@ -239,7 +239,7 @@
             // 
             this.tkgvv.Location = new System.Drawing.Point(4, 41);
             this.tkgvv.Name = "tkgvv";
-            this.tkgvv.Size = new System.Drawing.Size(122, 0);
+            this.tkgvv.Size = new System.Drawing.Size(0, 0);
             this.tkgvv.TabIndex = 7;
             this.tkgvv.Text = "Thống kê GV";
             this.tkgvv.UseVisualStyleBackColor = true;
@@ -249,7 +249,7 @@
             // 
             this.tkhss.Location = new System.Drawing.Point(4, 41);
             this.tkhss.Name = "tkhss";
-            this.tkhss.Size = new System.Drawing.Size(122, 0);
+            this.tkhss.Size = new System.Drawing.Size(0, 0);
             this.tkhss.TabIndex = 8;
             this.tkhss.Text = "Thống Kê HS";
             this.tkhss.UseVisualStyleBackColor = true;
@@ -293,46 +293,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(97, 57);
             this.panel6.TabIndex = 6;
-            // 
-            // mini
-            // 
-            this.mini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mini.BackColor = System.Drawing.Color.White;
-            this.mini.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mini.Image = global::WindowsFormsApp15.Properties.Resources.mini;
-            this.mini.Location = new System.Drawing.Point(656, 0);
-            this.mini.Name = "mini";
-            this.mini.Size = new System.Drawing.Size(40, 30);
-            this.mini.TabIndex = 4;
-            this.mini.UseVisualStyleBackColor = false;
-            this.mini.Click += new System.EventHandler(this.mini_Click);
-            // 
-            // moo
-            // 
-            this.moo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.moo.BackColor = System.Drawing.Color.White;
-            this.moo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.moo.Image = global::WindowsFormsApp15.Properties.Resources.ma;
-            this.moo.Location = new System.Drawing.Point(698, 0);
-            this.moo.Name = "moo";
-            this.moo.Size = new System.Drawing.Size(40, 30);
-            this.moo.TabIndex = 5;
-            this.moo.UseVisualStyleBackColor = false;
-            this.moo.Visible = false;
-            this.moo.Click += new System.EventHandler(this.moo_Click);
-            // 
-            // max
-            // 
-            this.max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.max.BackColor = System.Drawing.Color.White;
-            this.max.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.max.Image = global::WindowsFormsApp15.Properties.Resources.adj;
-            this.max.Location = new System.Drawing.Point(698, 0);
-            this.max.Name = "max";
-            this.max.Size = new System.Drawing.Size(40, 30);
-            this.max.TabIndex = 3;
-            this.max.UseVisualStyleBackColor = false;
-            this.max.Click += new System.EventHandler(this.max_Click);
             // 
             // panel2
             // 
@@ -425,6 +385,46 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Hệ Thống Quản lý Hoc Sinh";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mini
+            // 
+            this.mini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mini.BackColor = System.Drawing.Color.White;
+            this.mini.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mini.Image = global::WindowsFormsApp15.Properties.Resources.mini;
+            this.mini.Location = new System.Drawing.Point(656, 0);
+            this.mini.Name = "mini";
+            this.mini.Size = new System.Drawing.Size(40, 30);
+            this.mini.TabIndex = 4;
+            this.mini.UseVisualStyleBackColor = false;
+            this.mini.Click += new System.EventHandler(this.mini_Click);
+            // 
+            // moo
+            // 
+            this.moo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.moo.BackColor = System.Drawing.Color.White;
+            this.moo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moo.Image = global::WindowsFormsApp15.Properties.Resources.ma;
+            this.moo.Location = new System.Drawing.Point(698, 0);
+            this.moo.Name = "moo";
+            this.moo.Size = new System.Drawing.Size(40, 30);
+            this.moo.TabIndex = 5;
+            this.moo.UseVisualStyleBackColor = false;
+            this.moo.Visible = false;
+            this.moo.Click += new System.EventHandler(this.moo_Click);
+            // 
+            // max
+            // 
+            this.max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.max.BackColor = System.Drawing.Color.White;
+            this.max.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.max.Image = global::WindowsFormsApp15.Properties.Resources.adj;
+            this.max.Location = new System.Drawing.Point(698, 0);
+            this.max.Name = "max";
+            this.max.Size = new System.Drawing.Size(40, 30);
+            this.max.TabIndex = 3;
+            this.max.UseVisualStyleBackColor = false;
+            this.max.Click += new System.EventHandler(this.max_Click);
             // 
             // contextMenuStrip1
             // 

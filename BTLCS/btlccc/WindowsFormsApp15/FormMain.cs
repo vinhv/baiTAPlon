@@ -20,18 +20,17 @@ namespace WindowsFormsApp15
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
-        private const int cGrip = 36;      // Grip size
-        private const int cCaption = 92;   // Caption bar height;
-
+        private const int cGrip = 16;      // Grip size
+        private const int cCaption = 40;   // Caption bar height;
+        //create rectangle
         protected override void OnPaint(PaintEventArgs e)
         {
             Rectangle rc = new Rectangle(this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip);
             ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
             rc = new Rectangle(0, 0, this.ClientSize.Width, cCaption);
-            
-            e.Graphics.FillRectangle(Brushes.DarkBlue, rc);
+            e.Graphics.FillRectangle(Brushes.LightSteelBlue, rc);
         }
-
+        //change position
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x84)
@@ -332,7 +331,7 @@ namespace WindowsFormsApp15
             a.AutoScroll = true;
             a.FormBorderStyle = FormBorderStyle.None;
             
-            a.MdiParent = this;
+            //a.MdiParent = this;
             BaoForm.Controls.Add(a);
             a.Dock = DockStyle.Fill;
         }
@@ -370,8 +369,10 @@ namespace WindowsFormsApp15
         //form load
         private void FormMain_Load(object sender, EventArgs e)
         {
-          //  CanBoGiaoVienBLL c = new CanBoGiaoVienBLL();
-           
+            //  CanBoGiaoVienBLL c = new CanBoGiaoVienBLL();
+            pnChinh.Width = Width;
+            pnChinh.Height = Height - 60;
+            pnChinh.Location = new Point(0,30);
             dos();
             tabControl1.SelectedIndex = 0;
            
@@ -479,6 +480,13 @@ namespace WindowsFormsApp15
                 //if (Application.OpenForms[i].Name != "Menu")
                 Application.OpenForms[i].Close();
             }
+        }
+
+        private void FormMain_Resize(object sender, EventArgs e)
+        {
+            pnChinh.Width = Width;
+            pnChinh.Height = Height - 60;
+            pnChinh.Location = new Point(0, 30);
         }
     }
 }

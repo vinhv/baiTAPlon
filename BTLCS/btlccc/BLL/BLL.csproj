@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL</RootNamespace>
     <AssemblyName>BLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,11 +43,14 @@
   <ItemGroup>
     <Compile Include="CanBoGiaoVienBLL.cs" />
     <Compile Include="DanhSachGVBUL.cs" />
+    <Compile Include="DanhSachHocSinhBUL.cs" />
     <Compile Include="GiangDayPCDABLL.cs" />
     <Compile Include="HoSoHSBUL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyCBGVBUL.cs" />
     <Compile Include="QuanLyDiemBLL.cs" />
+    <Compile Include="QuanLyLopBUL.cs" />
+    <Compile Include="QuanLyMonBUL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

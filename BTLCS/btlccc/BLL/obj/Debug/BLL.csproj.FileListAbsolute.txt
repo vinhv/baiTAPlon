@@ -81,3 +81,12 @@ D:\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\normnfkd.nlp
 D:\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.dll
 D:\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\BLL.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\BLL.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DAL.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DTO.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DAL.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DTO.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.pdb

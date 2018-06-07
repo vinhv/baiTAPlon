@@ -16,6 +16,24 @@ namespace BLL
         {
             return pcgd.HienThiDS();
         }
+        public DataTable getMamon()
+        {
+            return pcgd.getMamon();
+        }
+        public DataTable getMalop()
+        {
+            return pcgd.getMalop();
+        }
+        public DataTable getGiaovien()
+        {
+            return pcgd.getGiaovien();
+        }
+        public int Phancong(PhanCongGiangDay x)
+        {
+
+            return pcgd.Them(x);
+        }
 
     }
+
 }

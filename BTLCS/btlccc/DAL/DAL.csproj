@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
     <AssemblyName>DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,12 +44,15 @@
   <ItemGroup>
     <Compile Include="canBo.cs" />
     <Compile Include="DanhSachGVDAL.cs" />
+    <Compile Include="DanhSachHocSinhDAL.cs" />
     <Compile Include="HoSoHSDAL.cs" />
     <Compile Include="KetNoi.cs" />
     <Compile Include="PCGDDADAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyCBGVDAL.cs" />
     <Compile Include="QuanLyDiemDAL.cs" />
+    <Compile Include="QuanLyLopDAL.cs" />
+    <Compile Include="QuanLyMonDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

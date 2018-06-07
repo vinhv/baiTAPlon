@@ -27,7 +27,7 @@ namespace DAL
                 a.TenLop = reader.GetString(1);
                 a.NienKhoa = reader.GetString(2);
                 a.SiSo = reader.GetInt32(3);
-                a.GiaoVienChuNHiem = reader.GetString(4);
+                a.GiaoVienChuNhiem = reader.GetString(4);
                 ds.Add(a);
             }
             Close();

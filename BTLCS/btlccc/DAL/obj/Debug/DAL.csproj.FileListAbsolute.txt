@@ -66,3 +66,10 @@ D:\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\normnfkd.nlp
 D:\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.dll
 D:\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DAL.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DAL.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DTO.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\bin\Debug\DTO.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DAL\obj\Debug\DAL.pdb

@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp15</RootNamespace>
     <AssemblyName>WindowsFormsApp15</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +52,12 @@
     </Compile>
     <Compile Include="DanhSachGiaoVien.designer.cs">
       <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachHocSinh.designer.cs">
+      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
     </Compile>
     <Compile Include="diemdialog.cs">
       <SubType>Form</SubType>
@@ -152,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="DanhSachGiaoVien.resx">
       <DependentUpon>DanhSachGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachHocSinh.resx">
+      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="diemdialog.resx">
       <DependentUpon>diemdialog.cs</DependentUpon>

@@ -67,7 +67,7 @@ namespace WindowsFormsApp15
 
         DanhSachGiaoVien tkGV = new DanhSachGiaoVien();
         //ThongKeGV tkGV = new ThongKeGV();
-        ThongKeHS tkHS = new ThongKeHS();
+        DanhSachHocSinh tkHS = new DanhSachHocSinh();
         QuanLyMonHoc qlMOnHoc = new QuanLyMonHoc();
         PhanCongGiangDay Phan = new PhanCongGiangDay();
         private bool chkqlDiem = false;

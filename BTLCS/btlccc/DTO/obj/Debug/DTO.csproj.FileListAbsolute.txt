@@ -30,3 +30,8 @@ D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normnfkd.nlp
 D:\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 D:\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
 D:\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.pdb
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
+G:\Code\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb

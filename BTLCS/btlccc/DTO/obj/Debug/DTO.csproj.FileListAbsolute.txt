@@ -19,3 +19,14 @@ C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.dll
 C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.pdb
 C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
 C:\Users\admin\Documents\git\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.dll
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\DTO.pdb
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\mscorlib.dll
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normidna.nlp
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normnfc.nlp
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normnfd.nlp
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normnfkc.nlp
+D:\baiTAPlon\BTLCS\btlccc\DTO\bin\Debug\normnfkd.nlp
+D:\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.dll
+D:\baiTAPlon\BTLCS\btlccc\DTO\obj\Debug\DTO.pdb

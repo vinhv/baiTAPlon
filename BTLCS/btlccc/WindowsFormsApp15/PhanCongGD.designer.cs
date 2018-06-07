@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHien = new System.Windows.Forms.Button();
             this.btnPhancong = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -133,20 +133,20 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Môn học";
             // 
-            // button2
+            // btnHien
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(391, 195);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 39);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Hiển Thị";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnHien.BackColor = System.Drawing.Color.Transparent;
+            this.btnHien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHien.Image = ((System.Drawing.Image)(resources.GetObject("btnHien.Image")));
+            this.btnHien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHien.Location = new System.Drawing.Point(391, 195);
+            this.btnHien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHien.Name = "btnHien";
+            this.btnHien.Size = new System.Drawing.Size(147, 39);
+            this.btnHien.TabIndex = 18;
+            this.btnHien.Text = "Hiển Thị";
+            this.btnHien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHien.UseVisualStyleBackColor = false;
             // 
             // btnPhancong
             // 
@@ -162,6 +162,7 @@
             this.btnPhancong.Text = "Phân Công";
             this.btnPhancong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPhancong.UseVisualStyleBackColor = false;
+            this.btnPhancong.Click += new System.EventHandler(this.btnPhancong_Click);
             // 
             // groupBox1
             // 
@@ -172,7 +173,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnHien);
             this.groupBox1.Controls.Add(this.cboMon);
             this.groupBox1.Controls.Add(this.btnPhancong);
             this.groupBox1.Controls.Add(this.cboLop);
@@ -218,7 +219,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvGiangday;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHien;
         private System.Windows.Forms.Button btnPhancong;
         private System.Windows.Forms.ComboBox cboLop;
         private System.Windows.Forms.ComboBox cboGiaovien;

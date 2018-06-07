@@ -75,5 +75,10 @@ namespace WindowsFormsApp15
             else
                 MessageBox.Show("sai tai khoan or mat khau ", "");
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
